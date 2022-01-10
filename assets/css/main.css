@@ -44,13 +44,18 @@ section {
   justify-content: space-between;
   padding: 5rem 0;
 }
+@media screen and (max-width: 770px) {
+  .header {
+    padding: 2rem 0;
+  }
+}
 .header__nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .header__nav-logo {
-  margin-right: 20rem;
+  margin-right: 16rem;
 }
 .header__nav-logo img {
   height: 5rem;
@@ -61,6 +66,11 @@ section {
   font-size: 2.4rem;
   font-weight: 600;
   flex: 1;
+}
+@media screen and (max-width: 770px) {
+  .header__nav-logo {
+    margin-right: 5rem;
+  }
 }
 .header__search-icon {
   color: #000;

@@ -3,12 +3,15 @@
     align-items: center;
     justify-content: space-between;
     padding: 5rem 0;
+    @include tablet(){
+        padding: 2rem 0;
+    }
     &__nav{
         display: flex;
         align-items: center;
         justify-content: space-between;
         &-logo{
-            margin-right: 20rem;
+            margin-right: 16rem;
             img{
                 height: 5rem;
             }
@@ -19,6 +22,12 @@
             font-size: 2.4rem;
             font-weight: 600;
             flex:1;
+        }
+        @include tablet(){
+            &-logo{
+                margin-right: 5rem;
+                
+            }
         }
         
     }
