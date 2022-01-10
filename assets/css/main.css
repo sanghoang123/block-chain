@@ -55,7 +55,7 @@ section {
   justify-content: space-between;
 }
 .header__nav-logo {
-  margin-right: 16rem;
+  margin-right: 6rem;
 }
 .header__nav-logo img {
   height: 5rem;
@@ -69,7 +69,7 @@ section {
 }
 @media screen and (max-width: 770px) {
   .header__nav-logo {
-    margin-right: 5rem;
+    margin-right: 4rem;
   }
 }
 .header__search-icon {
