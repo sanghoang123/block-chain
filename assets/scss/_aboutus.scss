@@ -1,0 +1,204 @@
+.hero{
+    background: url(../img/bg-aboutus.png) no-repeat center/cover;
+    max-width: 100%;
+    height: auto;
+    padding: 10rem 0;
+    &__heading{
+        font-size: 6.4rem;
+        font-weight: 500;
+        line-height: 1.2;
+        color:$bg-block;
+        padding: 20rem 0 30rem 10rem;
+    }
+    &__block{
+        display: flex;
+        align-items: flex-start;
+        gap: 0 5rem;
+        &-heading{
+            font-size: 4.8rem;
+            font-weight: 600;
+            line-height: 1.1;
+            color:$white;
+            flex: 2;
+        }
+        &-subtext{
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 1.1;
+            color:$white;
+            flex:5
+        }
+    }
+    @include phone(){
+        height: 100%;
+        padding: 10rem 0;
+        &__heading{
+            font-size: 4.4rem;
+            padding: 0 0 5rem 0;
+        }
+        &__block{
+            flex-direction: column;
+            gap: 3rem 0;
+            &-heading{
+                font-size: 3.6rem;
+                font-weight: 600;
+                line-height: 1.1;
+                color:$white;
+                flex: 2;
+            }
+            &-subtext{
+                font-size: 1.4rem;
+                font-weight: 400;
+                line-height: 1.1;
+                color:$white;
+                flex:5
+            }
+        }
+    }
+    @include tablet(){
+        height: 100%;
+        padding: 10rem 0;
+        &__heading{
+            font-size: 5.2rem;
+            padding: 0 0 5rem 0;
+        }
+        &__block{
+            flex-direction: column;
+            gap: 3rem 0;
+            &-heading{
+                font-size: 4rem;
+                font-weight: 600;
+                line-height: 1.1;
+                color:$white;
+                flex: 2;
+            }
+            &-subtext{
+                font-size: 2.2rem;
+                font-weight: 400;
+                line-height: 1.1;
+                color:$white;
+                flex:5
+            }
+        }
+    }
+}
+.slide-aboutus{
+    background: $bg-color;
+    .slide-block{
+    position: relative;
+    overflow: hidden;
+       .list-items{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: 0 -1.5rem;
+       .items{
+           width: calc(100%/3 );
+           padding: 1rem 1.5rem;
+        .item{
+            padding: 7rem 6rem;
+            border: .6rem solid $text-desc;
+            &-img{
+                width: 7rem;
+                height: 7rem;
+                object-fit: cover;
+                margin-bottom: 6rem;
+            }
+            &-heading{
+                color:$white;
+                font-size: 2.6rem;
+                font-weight: 600;
+                line-height: 1.1;
+                margin-bottom: 8rem;
+            }
+            &-text{
+                color: $white;
+                font-size: 1.4rem;
+                font-weight: 400;
+                line-height: 1.2;
+            }
+        }
+        .d-none{
+            display: none;
+        }
+       }
+    } 
+    .button-slide{
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        .btn-prev{
+            margin: .1rem ;
+        font-size: 3.2rem;
+        border: 1px solid $white;
+        padding: .5rem 2rem;
+        line-height: 1;
+    }
+    }
+    
+    @include phone(){
+        padding: 4rem 0;
+        .list-items{
+           
+           .items{
+               width: 100%;
+            .item{
+                &-img{
+                }
+                &-heading{
+                }
+                &-text{
+                }
+            }
+            .d-none{
+                display: block;
+            }
+           }
+        }
+        .button-slide{
+            position: static;
+            text-align: center;
+            .btn-prev{
+                margin: .1rem ;
+            font-size: 3.2rem;
+            border: 1px solid $white;
+            padding: .5rem 2rem;
+            line-height: 1;
+        }
+        }
+    }
+    @include tablet(){
+        padding: 4rem 0;
+        .list-items{
+           
+           .items{
+               width: 100%;
+            .item{
+                &-img{
+                }
+                &-heading{
+                }
+                &-text{
+                }
+            }
+            .d-none{
+                display: block;
+            }
+           }
+        }
+        .button-slide{
+            position: static;
+            text-align: center;
+            .btn-prev{
+                margin: .1rem ;
+            font-size: 3.2rem;
+            border: 1px solid $white;
+            padding: .5rem 2rem;
+            line-height: 1;
+        }
+        }
+    }
+    }
+    
+}
