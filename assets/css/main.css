@@ -67,7 +67,7 @@ img {
   height: 5rem;
 }
 .header__nav-icon {
-  display: inline-block;
+  display: none;
   color: #000;
   font-size: 2.4rem;
   font-weight: 600;
@@ -82,6 +82,25 @@ img {
   color: #000;
   font-size: 2.4rem;
   font-weight: 600;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+.navbar li {
+  margin-left: 6rem;
+}
+.navbar li a {
+  color: #000;
+  display: block;
+}
+
+.navbar-active {
+  display: flex !important;
 }
 
 @media screen and (max-width: 415px) {
@@ -110,6 +129,26 @@ img {
     color: #000;
     font-size: 2.4rem;
     font-weight: 600;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 16rem;
+    left: 0;
+    z-index: 999;
+    background: #fff;
+  }
+  .navbar li {
+    padding: 1rem 0;
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 440px) and (max-width: 770px) {
+  .navbar {
+    display: none;
   }
 }
 .banner {
