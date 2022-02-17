@@ -2,7 +2,7 @@ footer{
     background: $bg-footer;
     padding: 10rem 0;
     @include phone(){
-        padding: 5rem 0;
+        padding: unset;
     }
 }
 .footer__top{
@@ -23,7 +23,8 @@ footer{
         font-weight: 400;
     }
     @include phone(){
-        text-align: center;
+        text-align: left;
+        padding: 2rem 0 3rem;
         &-text{
             font-size: 1.8rem;
         }
@@ -34,7 +35,7 @@ footer{
         }
     }
     @include tablet(){
-        text-align: center;
+        text-align: left;
         &-text{
             font-size: 2.4rem;
         }
@@ -51,7 +52,7 @@ footer{
 }
 .footer__bottom{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 2rem 0;
     &-coppyright{
@@ -73,11 +74,14 @@ footer{
     }
     @include phone(){
         flex-direction: column;
+        &-coppyright{
+            font-size: 1.2rem;
+        }
         &-social{
             a{
                 display: inline-block;
                 padding: 1rem .5rem;
-                font-size: 3.6rem;
+                font-size: 1.8rem;
             }
         }
     }

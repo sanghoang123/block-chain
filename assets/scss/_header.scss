@@ -59,6 +59,7 @@
 }
 @include phone(){
     .header{
+        padding: 2rem 0;
         &__nav{
             width: 100%;
             display: flex;
@@ -92,7 +93,7 @@
         flex-direction: column;
         position: absolute;
         width: 100%;
-        top:16rem;
+        top:10rem;
         left: 0;
         z-index: 999;
         background: $white;
