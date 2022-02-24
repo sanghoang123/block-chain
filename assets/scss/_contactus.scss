@@ -6,12 +6,6 @@
         font-weight: 500;
         color: $bg-block;
     }
-    @include phone(){
-        padding: 6rem 0;
-        h2{
-            font-size: 4.8rem;
-        }
-    }
 }
 .contact__form{
     background: #E5F9F9;
@@ -40,9 +34,6 @@
         .last-name{
             flex: 1;
         }
-        @include phone(){
-            flex-direction: column;
-        }
     }
     input, select, textarea{
         width: 100%;
@@ -61,24 +52,4 @@
         cursor: pointer;
         margin-top: 6.4rem;
     }
-   @include phone(){
-    padding: 5rem 1rem;
-    margin: 1rem 0;
-    &-title{
-        margin-bottom: 3.2rem;
-    } 
-    &-text{
-        padding: .6rem 0;
-    }
-    input, select, textarea{
-        padding: 1.2rem;
-    }
-    .btn-submit{
-        width: 100%;
-        margin-top: 3.2rem;
-    }
-   }
-   @include tablet(){
-
-   }
 }
