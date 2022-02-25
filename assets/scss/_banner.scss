@@ -1,86 +1,136 @@
-
-.banner{
+.banner {
     width: 100%;
     position: relative;
-    margin-bottom: 20rem;
-    &-img{
+    background-image: url(../img/banner.png);
+    padding-top: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    // margin-bottom: 20rem;
+    @include mobile {
+        padding-top: 70%;
+        background-position: top center;
+    }
+    @include phone {
+        padding-top: 100%;
+    }
+    &-img {
         max-width: 100%;
     }
-    &__title{
+    &__title {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         width: 50%;
-        &-heading{
-            color:$white;
+        @include tablet {
+            width: 70%;
+        }
+        @include mobile {
+            top: 80%;
+            transform: translateY(-80%);
+        }
+        @include phone {
+            width: calc(100% - 24px);
+        }
+        &-heading {
+            color: $white;
             font-size: 4.8rem;
             font-weight: 600;
             margin-bottom: 3rem;
-            line-height: 1;
+            line-height: 5rem;
+            @include tablet {
+                --size: 3rem;
+                font-size: var(--size);
+                font-weight: 500;
+                margin-bottom: 2rem;
+                line-height: calc(var(--size) + 0.2rem);
+            }
+
+            @include phone {
+                font-size: 3.2rem;
+                line-height: 3.36rem;
+            }
         }
-        &-text{
-            color:$white;
+        &-text {
+            color: $white;
             font-size: 2.4rem;
             font-weight: 400;
-            line-height: 1;
+            line-height: 2.5rem;
+            @include tablet {
+                font-size: 1.6rem;
+            }
+            @include phone {
+                font-size: 1.8rem;
+                line-height: 1.89rem;
+            }
         }
     }
 }
-.intro{
+.intro {
+    margin: 6rem 0 10rem 24rem;
     margin-top: 6rem;
     margin-bottom: 10rem;
-    &__introduce{
+    @include desktops {
+        margin-left: 18rem;
+    }
+    @include tablet {
+        margin-left: 0rem;
+    }
+    &__contain {
         display: flex;
         align-content: center;
         justify-items: flex-start;
+        flex-direction: row;
         margin-bottom: 10rem;
-        &-heading{
-            flex-basis: 40%;
-            color:$white;
-            font-size: 4.8rem;
-            font-weight: 600;
-            line-height: 1;
-        }
-        &-block{
-            flex-basis: 60%;
-            &-text{
-                color:$white;
-                font-size: 1.8rem;
-                line-height: 1.2;
-                font-weight: 400;
-            }
+        @include phone {
+            flex-direction: column;
+            margin-bottom: 6rem;
         }
     }
-    &__services{
-        display: flex;
-        align-content: center;
-        justify-items: flex-start;
-        &-heading{
-            flex-basis: 40%;
-            color:$white;
-            font-size: 4.8rem;
-            font-weight: 600;
-            line-height: 1;
+    &__contain + &__contain {
+        margin-bottom: 0;
+    }
+    &__heading {
+        flex-basis: 40%;
+        color: $white;
+        font-size: 4.8rem;
+        font-weight: 600;
+        line-height: 1;
+        @include tablet {
+            font-size: 3rem;
         }
-        &-block{
-            flex-basis: 60%;
-            &-text{
-                position: relative;
-                color:$white;
-                font-size: 1.8rem;
-                line-height: 1.2;
-                font-weight: 400;
-                padding-top: 3rem;
-                &::after{
-                    content: "";
-                    display: block;
-                    width: 5rem;
-                    height: .5rem;
-                    background: $bg-block;
-                    position: absolute;
-                    top: 0;
-                }
+        @include mobile {
+            padding-bottom: 1.6rem;
+        }
+    }
+    &__block {
+        flex-basis: 60%;
+        &-text {
+            color: $white;
+            font-size: 1.8rem;
+            line-height: 1.2;
+            font-weight: 400;
+
+            @include tablet {
+                font-size: 1.6rem;
             }
+            @include mobile {
+                font-size: 1.2rem;
+                line-height: 1.44rem;
+            }
+        }
+        &-text--line {
+            position: relative;
+            padding-top: 3rem;
+        }
+        &-text--line::after {
+            content: "";
+            display: block;
+            width: 5rem;
+            height: 0.5rem;
+            background: $bg-block;
+            position: absolute;
+            top: 0;
         }
     }
 }

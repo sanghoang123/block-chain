@@ -1,50 +1,130 @@
-.header{
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 5rem 0;
-    &__nav{
+    @include desktops {
+        padding: 2.5rem 0;
+    }
+    @include tablet {
+        padding: 2.4rem 0;
+    }
+    @include phone {
+        padding: 1.4rem 0;
+    }
+    &__nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        &-logo{
+
+        &-logo {
             margin-right: 6rem;
-            img{
-                height: 5rem;
+            @include desktops {
+                margin-right: 5rem;
+            }
+            @include tablet {
+                margin-right: 2rem;
+            }
+            @include phone {
+                margin-right: 1rem;
+            }
+
+            img {
+                height: 7rem;
+                @include desktops {
+                    height: 6rem;
+                }
+                @include ipad {
+                    height: 5rem;
+                }
+                @include phone-l {
+                    height: 5rem;
+                }
+                @include phone {
+                    height: 3rem;
+                }
+            }
+            .nav-logo__pc {
+                @include tablet {
+                    display: none;
+                }
+            }
+            img.nav-logo__small {
+                display: none;
+                @include desktops {
+                    display: none;
+                }
+                @include tablet {
+                    display: block;
+                }
             }
         }
-        &-icon{
+        &-icon {
             display: none;
-            color:$black;
+            color: $black;
             font-size: 2.4rem;
             font-weight: 600;
-            flex:1;
+            flex: 1;
         }
-        
     }
-    &__search{
-        &-icon{
-            color:$black;
+
+    &__search {
+        &-icon {
+            color: $black;
             font-size: 2.4rem;
             font-weight: 600;
+            @include mobile {
+                font-size: 1.8rem;
+            }
         }
     }
 }
-.navbar{
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 2.2rem;
-    font-weight: 500;
-    li{
+    li {
         margin-left: 6rem;
-        a{
-            color:$black;
-            display: block;
-
+        a {
+            font-size: 2.2rem;
+            font-weight: 500;
+            line-height: 23.1px;
+            color: $black;
+            display: flex;
+            align-items: center;
+            ion-icon {
+                padding-left: 6px;
+            }
+            @include desktops {
+                font-size: 1.8rem;
+                line-height: 1.8rem;
+            }
+            @include ipad {
+                font-size: 1.6rem;
+                line-height: 1.6rem;
+            }
+            @include mobile {
+                font-size: 1.2rem;
+                line-height: 1.2rem;
+            }
+            @include phone {
+                font-size: 1rem;
+            }
+        }
+        @include desktops {
+            margin-left: 5rem;
+        }
+        @include ipad {
+            margin-left: 3rem;
+        }
+        @include phone-l {
+            margin-left: 4rem;
+        }
+        @include phone {
+            margin-left: 1.3rem;
         }
     }
 }
-.navbar-active{
+.navbar-active {
     display: flex !important;
 }

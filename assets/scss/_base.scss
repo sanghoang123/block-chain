@@ -1,26 +1,20 @@
-html{
+html {
     font-size: 62.5%;
 }
-body{
+body {
     margin: 0 auto;
-    font-family: 'Poppins', sans-serif;
-    
+    font-family: "Poppins", sans-serif;
 }
-.container{
-    max-width: 1920px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-section{
+
+section {
     background-color: $bg-color;
 }
-.btn{
+.btn {
     display: inline-block;
     color: $white;
     text-decoration: none;
 }
-img{
+img {
     display: block;
     max-width: 100%;
     max-height: 100%;
