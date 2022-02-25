@@ -46,3 +46,32 @@ footer{
         }
     }
 }
+@include phone(){
+    .parent{
+        padding: 0;
+    }
+    footer {
+        padding:unset;
+    }
+    .footer__bottom {
+        flex-direction: column;
+    }
+}
+@include tablet(){
+    .parent{
+        padding: 0;
+    }
+}
+@include mobile(){
+    .parent{
+        padding: 0;
+    }
+}
+@include ipad(){
+    .parent{
+        padding: 0;
+    }
+}
+@include desktops(){
+    
+}

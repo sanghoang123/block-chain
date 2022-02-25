@@ -16,7 +16,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        &-logo-m{
+            display: none;
+        }
         &-logo {
             margin-right: 6rem;
             @include desktops {
@@ -127,4 +129,13 @@
 }
 .navbar-active {
     display: flex !important;
+}
+
+@include phone(){
+    .header__nav-logo{
+        display: none;
+    }
+    .header__nav-logo-m{
+        display: block;
+    }
 }
