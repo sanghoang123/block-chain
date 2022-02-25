@@ -5,12 +5,15 @@
         font-size: 6.4rem;
         font-weight: 500;
         color: $bg-block;
+        margin: 0 24rem;
     }
+}
+.parents{
+    padding: 16rem 24rem;
 }
 .contact__form{
     background: #E5F9F9;
     padding: 10rem;
-    margin: 10rem 0;
     width: 100%;
     &-title{
         display: block;

@@ -641,7 +641,7 @@ img {
   height: 40rem;
 }
 .feature-slide .swiper-wrapper .swiper-slide {
-  width: calc(100%/2 - 40px) !important;
+  width: calc(50% - 40px) !important;
   position: relative;
 }
 .feature-slide .swiper-wrapper .swiper-slide .feature-img {
@@ -695,6 +695,10 @@ footer {
   padding: 10rem 0;
 }
 
+.parent {
+  padding: 0 24rem;
+}
+
 .footer__top {
   border-bottom: 1px solid #fff;
   padding: 2rem 0;
@@ -744,12 +748,16 @@ footer {
   font-size: 6.4rem;
   font-weight: 500;
   color: #02A4AE;
+  margin: 0 24rem;
+}
+
+.parents {
+  padding: 16rem 24rem;
 }
 
 .contact__form {
   background: #E5F9F9;
   padding: 10rem;
-  margin: 10rem 0;
   width: 100%;
 }
 .contact__form-title {
@@ -841,7 +849,7 @@ footer {
   margin: 0 -1.5rem;
 }
 .slide-aboutus .slide-block .list-items .items {
-  width: calc(100%/3 );
+  width: 33.3333333333%;
   padding: 1rem 1.5rem;
 }
 .slide-aboutus .slide-block .list-items .items .item {
@@ -908,7 +916,7 @@ footer {
 }
 .feature-block__slide-item {
   padding: 0 15px;
-  width: calc(100%/2);
+  width: 50%;
   height: 40rem;
   position: relative;
 }
@@ -953,7 +961,7 @@ footer {
 }
 .feature-block__layout-item {
   background: url(../img/layout2.jfif) no-repeat center/cover;
-  flex: 1 1 calc(100% / 3 - 30px);
+  flex: 1 1 calc(33.3333333333% - 30px);
   margin-left: 30px;
   margin-bottom: 30px;
 }
