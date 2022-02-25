@@ -106,9 +106,63 @@
         padding: unset;
     }
 }
-@include phone-l(){}
-@include mobile(){}
-@include ipad(){}
-@include tablet(){}
+@include phone-l(){.parents{
+    padding: unset;
+}}
+@include mobile(){.parents{
+    padding: unset;
+}}
+@include ipad(){.parents{
+    padding: unset;
+}}
+@include tablet(){
+    .contactus-heading{
+        background: $bg-color;
+        padding: 6rem 0;
+        h2{
+            font-size: 4.8rem;
+            font-weight: 500;
+            color: $bg-block;
+            margin: unset;
+        }
+    }
+    .contact__form{
+        padding: 3rem;
+        margin: 3rem 0;
+        &-title{
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+        }
+        &-text{
+            font-size: 1.2rem;
+            padding: 1rem 0;
+        }
+        .name{
+            display: flex;
+            gap: 0 1.6rem;
+            .first-name{
+                flex: 1;
+            }
+            .last-name{
+                flex: 1;
+            }
+        }
+        input, select, textarea{
+            width: 100%;
+            padding: 1.6rem;
+            outline: none;
+            border-radius: .5rem;
+            border: 1px solid rgba(61, 68, 78, 0.281) ;
+        }
+        .btn-submit{
+            background: $bg-color;
+            padding: .9rem 1.2rem;
+            border-radius: .5rem;
+            font-size: 1.8rem;
+            margin-top: 3.9rem;
+            min-width: 9rem;
+        }
+    }
+}
 @include desktops(){
 }

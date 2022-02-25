@@ -241,6 +241,15 @@ img {
     display: block;
   }
 }
+@media screen and (max-width: 1199.98px) {
+  .header__nav-logo {
+    display: none;
+  }
+
+  .header__nav-logo-m {
+    display: block;
+  }
+}
 .banner {
   width: 100%;
   position: relative;
@@ -891,6 +900,71 @@ footer {
 
   .parents {
     padding: unset;
+  }
+}
+@media screen and (min-width: 576px) {
+  .parents {
+    padding: unset;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .parents {
+    padding: unset;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .parents {
+    padding: unset;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .contactus-heading {
+    background: #002631;
+    padding: 6rem 0;
+  }
+  .contactus-heading h2 {
+    font-size: 4.8rem;
+    font-weight: 500;
+    color: #02A4AE;
+    margin: unset;
+  }
+
+  .contact__form {
+    padding: 3rem;
+    margin: 3rem 0;
+  }
+  .contact__form-title {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+  }
+  .contact__form-text {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+  }
+  .contact__form .name {
+    display: flex;
+    gap: 0 1.6rem;
+  }
+  .contact__form .name .first-name {
+    flex: 1;
+  }
+  .contact__form .name .last-name {
+    flex: 1;
+  }
+  .contact__form input, .contact__form select, .contact__form textarea {
+    width: 100%;
+    padding: 1.6rem;
+    outline: none;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(61, 68, 78, 0.281);
+  }
+  .contact__form .btn-submit {
+    background: #002631;
+    padding: 0.9rem 1.2rem;
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
+    margin-top: 3.9rem;
+    min-width: 9rem;
   }
 }
 .hero {
