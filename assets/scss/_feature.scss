@@ -1,70 +1,187 @@
-.feature {
-    padding-bottom: 20rem;
-    &__block {
-        padding: 16rem 0;
+.feature-block {
+    padding: 16rem 12rem;
+    @include desktops {
+        padding: 8rem 6rem;
     }
-    &-heading {
-        color: $white;
-        font-size: 4.8rem;
+    @include tablet {
+        padding: 8rem 6rem;
+    }
+    @include mobile {
+        padding: 6rem 0 0;
+    }
+    .feature__title {
+        padding-left: 1rem;
         font-weight: 600;
-        margin-bottom: 10rem;
+        font-size: 48px;
+        line-height: 50px;
+        color: $white;
+        @include mobile {
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 29px;
+        }
     }
-    &-slide {
-        .swiper {
-            width: 100%;
-            height: 40rem;
-            &-wrapper {
-                .swiper-slide {
-                    width: calc(100% / 2 - 40px) !important;
-                    position: relative;
-                    .feature-img {
-                        max-width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                    .feature__block {
-                        position: absolute;
-                        width: 80%;
-                        padding: 4rem 6rem;
-                        background: $white;
-                        bottom: 0;
-                        left: 0;
-                        transition: 0.4s linear;
-                        &:hover {
-                            background: $bg-block;
-                            .feature__block-days {
-                                color: $white;
-                            }
-                        }
+    .feature-slider {
+        padding-top: 10rem;
+        @include desktops {
+            padding-top: 5rem;
+        }
+        @include tablet {
+            padding-top: 5rem;
+        }
+        @include mobile {
+            padding-top: 3rem;
+        }
+        .feature {
+            margin: 1rem;
+            position: relative;
+            display: flex;
+            height: 500px;
+            margin-bottom: 20px;
+            &__info {
+                width: calc(55% + 1rem);
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                padding: 60px;
+                background: #3ccace;
+                border-top-right-radius: 4px;
+                @include tablet {
+                    padding: 3.2rem;
+                }
+                @include mobile {
+                    padding: 1.6rem;
+                }
+            }
+            &__head {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 150%;
 
-                        &-days {
-                            color: $bg-block;
-                            font-size: 1.6rem;
-                            font-weight: 600;
-                            margin-bottom: 1.6rem;
-                        }
-                        &-heading {
-                            color: $black;
-                            padding-right: 4rem;
-                            font-weight: 600;
-                            font-size: 3.2rem;
-                            line-height: 1.2;
-                            margin-bottom: 2.4rem;
-                        }
-                        &-btn {
-                            display: inline-flex;
-                            align-items: center;
-                            background: $bg-block;
-                            padding: 1.6rem 2.4rem;
-                            font-size: 1.6rem;
-                            transition: 0.5s linear;
-                            &:hover {
-                                background: $bg-color;
-                            }
-                        }
-                    }
+                color: #ffffff;
+                @include desktops {
+                    font-size: 1.5rem;
+                }
+                @include tablet {
+                    font-size: 1.4rem;
+                }
+                @include mobile {
+                    font-size: 1.2rem;
+                }
+            }
+            &__heading {
+                font-weight: 600;
+                font-size: 48px;
+                line-height: 120%;
+                margin: 16px 0;
+                color: #000000;
+                @include desktops {
+                    font-size: 3.6rem;
+                }
+                @include tablet {
+                    font-size: 2.4rem;
+                }
+                @include mobile {
+                    font-size: 2.2rem;
+                }
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 12px;
+            }
+            &-title {
+                font-size: 20px;
+                color: #8e8fb5;
+                @include desktops {
+                    font-size: 1.2rem;
+                }
+                @include tablet {
+                    font-size: 1.2rem;
+                }
+
+                @include mobile {
+                    font-size: 1.2rem;
+                }
+            }
+            &__btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 0 1rem;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 150%;
+                @include tablet {
+                    font-size: 1rem;
                 }
             }
         }
     }
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 1;
+    z-index: 5;
+    transition: all 0.2s linear;
+    color: $black !important;
+    background-color: $white !important;
+}
+.slick-arrow:hover {
+    background-color: #2cccff !important;
+    color: white !important;
+}
+.slick-next:before,
+.slick-prev:before {
+    content: "";
+}
+
+.slick-prev {
+    left: 0;
+}
+.slick-next {
+    right: 0;
+}
+
+.slick-dotted.slick-slider {
+    margin: 0;
+    padding-bottom: 30px !important;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    gap: 0 20px;
+    @include phone {
+        bottom: 2%;
+    }
+}
+.slick-dots button {
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 100rem;
+    background-color: #eee;
+    border: none;
+    outline: none;
+    transition: all 0.2s linear;
+}
+.slick-dots .slick-active button {
+    background-color: #2cccff;
 }
