@@ -1,28 +1,95 @@
-.blockchain{
-    margin-bottom: 10rem;
-    &-block{
+.blockchain {
+    padding: 10rem 18rem;
+    @include desktops {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    @include tablet {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    &-block {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-       img{
-           object-fit: cover;
-       }
-        .img-multichan,.img-openchain,.img-stellar{
-            align-self:start;
+        @include mobile {
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding-top: 2rem;
         }
-        .img-hyper,.img-startis{
-            align-self:end;
-                }
+        @include phone {
+            gap: 1rem;
+        }
+        img {
+            object-fit: cover;
+            padding-left: 1rem;
+            @include tablet {
+                width: 9rem;
+            }
+            @include mobile {
+                width: 4rem;
+                justify-self: center;
+            }
+            @include phone {
+                flex: 30%;
+            }
+        }
+
+        .img-plus {
+            @include desktops {
+                width: 20rem;
+            }
+            @include tablet {
+                width: 150px;
+            }
+            @include mobile {
+                width: 7rem;
+            }
+        }
+        .img-pos {
+        }
+        .img-multichan,
+        .img-openchain,
+        .img-stellar {
+            align-self: start;
+        }
+        .img-hyper,
+        .img-startis {
+            align-self: end;
+        }
     }
-    &-title{
+    &-title {
         display: flex;
         justify-content: center;
         margin: 2rem 0;
-        .title{
+        @include mobile {
+            order: -1;
+        }
+        .title {
             color: $white;
             font-size: 3.8rem;
             font-weight: 600;
+            @include mobile {
+                font-size: 2rem;
+            }
         }
+    }
+}
+@include desktops {
+    .blockchain {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+@include tablet {
+    .blockchain {
+        padding-left: 4rem;
+        padding-right: 4rem;
     }
 }
