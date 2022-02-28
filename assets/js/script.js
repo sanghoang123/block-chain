@@ -20,42 +20,29 @@ $(document).ready(function () {
           d="M10.7787 5.62479C11.0738 5.78675 11.0738 6.21325 10.7787 6.37521L0.627762 11.9472C0.344869 12.1025 -1.40814e-08 11.8964 0 11.572L4.83896e-07 0.427966C4.9798e-07 0.103598 0.34487 -0.102527 0.627763 0.0527584L10.7787 5.62479Z"
           fill="black" />
       </svg></button>`,
-    responsive: [
-      {
-        breakpoint: 1025,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-    autoplay: true,
+
+    // autoplay: true,
     autoplaySpeed: 2000,
     centerMode: true,
     centerPadding: '6px',
     responsive: [
       {
-        breakpoint: 1200,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          infinite: true,
         },
       },
       {
-        breakpoint: 1008,
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
+          dots: true,
         },
       },
       {
-        breakpoint: 800,
-        settings: 'unslick',
+        breakpoint: 300,
+        settings: 'unslick', // destroys slick
       },
     ],
   });

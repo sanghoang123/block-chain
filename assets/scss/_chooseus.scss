@@ -1,74 +1,131 @@
-.chooseus{
+.chooseus {
     display: flex;
     justify-content: flex-start;
-    gap:  4rem;
-    margin-bottom: 10rem;
-    &__banner{
-        text-align: center;
+    gap: 4rem;
+    padding: 10rem 0;
+    @include tablet {
+        flex-direction: column;
+    }
+    @include phone {
+        padding: 6rem 0;
+    }
+    &__banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         flex-basis: 40%;
-        &-heading{
+        @include tablet {
+            align-items: flex-start;
+        }
+        &-heading {
+            width: 65%;
             color: $white;
             font-size: 4.8rem;
             font-weight: 600;
             margin-bottom: 5rem;
+            @include tablet {
+                text-align: start;
+            }
+            @include phone {
+                width: 100%;
+                font-size: 2.8rem;
+                line-height: 2.94rem;
+                margin-bottom: 1.6rem;
+            }
         }
-        &-img{
+        &-desc {
+            @include text;
+            display: none;
+            @include tablet {
+                display: block;
+            }
+            @include phone {
+                font-size: 1.2rem;
+                line-height: 1.8rem;
+                padding-top: 1.6rem;
+            }
+        }
+        &-img {
             max-width: 100%;
+            @include tablet {
+                display: none;
+            }
         }
     }
-    &__desc{
+    &__desc {
         flex-basis: 60%;
         display: flex;
         gap: 0 4rem;
-        &-block{
+        @include phone {
+            gap: 0 2rem;
+        }
+        &-block {
             display: flex;
             flex-direction: column;
             gap: 4rem 0;
-            &-text{
-                    color:$white;
-                    font-size: 1.2rem;
-                    line-height: 1.2;
-                    font-weight: 400;
-                    position: relative;
-                    padding-top: 4rem;
-                    &::after{
-                        content: "";
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 5rem;
-                        height: .5rem;
-                        background: $bg-block;
-                    }
+            flex: 1;
+            &-text {
+                @include text;
+                @include tablet {
+                    display: none;
+                }
             }
-            &-info{
+            &-info {
                 width: 30rem;
                 padding: 2rem 4rem;
                 background: $bg-block;
                 align-self: end;
-                .info-icon{
+                border-radius: 1rem;
+                @include tablet {
+                    width: 100%;
+                }
+                @include phone {
+                    padding: 2rem;
+                }
+                .info-icon {
                     color: $white;
                     font-size: 5rem;
                     display: block;
                     border-bottom: 1px solid $white;
                     padding-bottom: 10rem;
+                    @include phone {
+                        padding-bottom: 4rem;
+                    }
                 }
-                .info-block{
+                .info-block {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    color:$white;
+                    color: $white;
                     padding: 1rem 0;
-                    &-text{
+                    min-height: 100px;
+
+                    &-text {
                         font-size: 2rem;
                         font-weight: 600;
                         letter-spacing: 1px;
+                        @include phone {
+                            font-size: 1.2rem;
+                        }
                     }
-                    &-icon{
-                        font-size: 2rem;
+                    &-icon {
+                        font-size: 3rem;
                         font-weight: 600;
                     }
                 }
+            }
+            &-info--img {
+                background-color: unset;
+                padding: 0;
+                display: none;
+                @include tablet {
+                    display: block;
+                }
+            }
+        }
+        &-block:first-child {
+            @include tablet {
+                padding-top: 10rem;
             }
         }
     }

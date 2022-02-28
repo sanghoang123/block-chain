@@ -1,67 +1,70 @@
-.feature{
+.feature {
     padding-bottom: 20rem;
-    &-heading{
-        color:$white;
+    &__block {
+        padding: 16rem 0;
+    }
+    &-heading {
+        color: $white;
         font-size: 4.8rem;
         font-weight: 600;
         margin-bottom: 10rem;
     }
-    &-slide{
+    &-slide {
         .swiper {
             width: 100%;
             height: 40rem;
-            &-wrapper{
-                .swiper-slide{
-                    width: calc(100%/2 - 40px) !important;
+            &-wrapper {
+                .swiper-slide {
+                    width: calc(100% / 2 - 40px) !important;
                     position: relative;
-                    .feature-img{
+                    .feature-img {
                         max-width: 100%;
                         height: 100%;
                         object-fit: cover;
                     }
-                    .feature__block{
+                    .feature__block {
                         position: absolute;
                         width: 80%;
-                        padding:4rem 6rem ;
-                        background:$white;
+                        padding: 4rem 6rem;
+                        background: $white;
                         bottom: 0;
                         left: 0;
-                        transition: .4s linear;
-                        &:hover{
+                        transition: 0.4s linear;
+                        &:hover {
                             background: $bg-block;
-                            .feature__block-days{
-                                color:$white;
+                            .feature__block-days {
+                                color: $white;
                             }
                         }
-                        
-                        &-days{
-                            color:$bg-block;
+
+                        &-days {
+                            color: $bg-block;
                             font-size: 1.6rem;
                             font-weight: 600;
                             margin-bottom: 1.6rem;
                         }
-                        &-heading{
-                            color:$black;
+                        &-heading {
+                            color: $black;
                             padding-right: 4rem;
                             font-weight: 600;
                             font-size: 3.2rem;
                             line-height: 1.2;
                             margin-bottom: 2.4rem;
                         }
-                        &-btn{
+                        &-btn {
                             display: inline-flex;
                             align-items: center;
                             background: $bg-block;
                             padding: 1.6rem 2.4rem;
                             font-size: 1.6rem;
-                            transition: .5s linear;
-                            &:hover{
+                            transition: 0.5s linear;
+                            &:hover {
                                 background: $bg-color;
                             }
                         }
                     }
                 }
             }
-          }
+        }
     }
 }
