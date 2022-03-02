@@ -1,90 +1,122 @@
-.hero{
+.hero {
     background: url(../img/bg-aboutus.png) no-repeat center/cover;
     max-width: 100%;
     height: auto;
     padding: 10rem 0;
-    &__heading{
+    @include tablet {
+        padding: 5rem 0;
+    }
+    &__heading {
         font-size: 6.4rem;
         font-weight: 500;
         line-height: 1.2;
-        color:$bg-block;
+        color: $bg-block;
         padding: 20rem 0 30rem 10rem;
+        @include tablet {
+            padding: 8rem 0;
+            font-size: 5.2rem;
+            line-height: 5.4rem;
+        }
+        @include mobile {
+            padding: 8rem 0;
+            font-size: 3.2rem;
+            line-height: 3.4rem;
+        }
     }
-    &__block{
+    &__block {
         display: flex;
         align-items: flex-start;
         gap: 0 5rem;
-        &-heading{
+        @include mobile {
+            flex-direction: column;
+        }
+        &-heading {
             font-size: 4.8rem;
             font-weight: 600;
             line-height: 1.1;
-            color:$white;
+            color: $white;
             flex: 2;
+            @include mobile {
+                padding-bottom: 1.6rem;
+                font-size: 28px;
+                line-height: 29px;
+            }
         }
-        &-subtext{
+        &-subtext {
             font-size: 1.8rem;
             font-weight: 400;
             line-height: 1.1;
-            color:$white;
-            flex:5
+            color: $white;
+            flex: 5;
+            span {
+                display: block;
+                padding-top: 2rem;
+            }
         }
     }
-   
 }
-.slide-aboutus{
+
+.about__content {
     background: $bg-color;
-    .slide-block{
-    position: relative;
-    overflow: hidden;
-       .list-items{
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        margin: 0 -1.5rem;
-       .items{
-           width: calc(100%/3 );
-           padding: 1rem 1.5rem;
-        .item{
-            padding: 7rem 6rem;
-            border: .6rem solid $text-desc;
-            &-img{
-                width: 7rem;
-                height: 7rem;
-                object-fit: cover;
-                margin-bottom: 6rem;
-            }
-            &-heading{
-                color:$white;
-                font-size: 2.6rem;
-                font-weight: 600;
-                line-height: 1.1;
-                margin-bottom: 8rem;
-            }
-            &-text{
-                color: $white;
-                font-size: 1.4rem;
-                font-weight: 400;
-                line-height: 1.2;
-            }
-        }
-        .d-none{
-            display: none;
-        }
-       }
-    } 
-    .button-slide{
-        position: absolute;
-        bottom: 10%;
-        left: 50%;
-        .btn-prev{
-            margin: .1rem ;
-        font-size: 3.2rem;
-        border: 1px solid $white;
-        padding: .5rem 2rem;
-        line-height: 1;
+    padding-bottom: 12rem;
+    @include mobile {
+        padding-bottom: 3rem;
     }
-    }
-    }
-    
 }
+// .slide-aboutus{
+//     background: $bg-color;
+//     .slide-block{
+//     position: relative;
+//     overflow: hidden;
+//        .list-items{
+//         display: flex;
+//         align-items: flex-start;
+//         justify-content: flex-start;
+//         flex-wrap: wrap;
+//         margin: 0 -1.5rem;
+//        .items{
+//            width: calc(100%/3 );
+//            padding: 1rem 1.5rem;
+//         .item{
+//             padding: 7rem 6rem;
+//             border: .6rem solid $text-desc;
+//             &-img{
+//                 width: 7rem;
+//                 height: 7rem;
+//                 object-fit: cover;
+//                 margin-bottom: 6rem;
+//             }
+//             &-heading{
+//                 color:$white;
+//                 font-size: 2.6rem;
+//                 font-weight: 600;
+//                 line-height: 1.1;
+//                 margin-bottom: 8rem;
+//             }
+//             &-text{
+//                 color: $white;
+//                 font-size: 1.4rem;
+//                 font-weight: 400;
+//                 line-height: 1.2;
+//             }
+//         }
+//         .d-none{
+//             display: none;
+//         }
+//        }
+//     }
+//     .button-slide{
+//         position: absolute;
+//         bottom: 10%;
+//         left: 50%;
+//         .btn-prev{
+//             margin: .1rem ;
+//         font-size: 3.2rem;
+//         border: 1px solid $white;
+//         padding: .5rem 2rem;
+//         line-height: 1;
+//     }
+//     }
+//     }
+
+// }

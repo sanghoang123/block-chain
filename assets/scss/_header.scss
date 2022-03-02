@@ -16,7 +16,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        &-logo-m{
+        &-logo-m {
             display: none;
         }
         &-logo {
@@ -129,21 +129,4 @@
 }
 .navbar-active {
     display: flex !important;
-}
-
-@include phone(){
-    .header__nav-logo{
-        display: none;
-    }
-    .header__nav-logo-m{
-        display: block;
-    }
-}
-@include tablet(){
-    .header__nav-logo{
-        display: none;
-    }
-    .header__nav-logo-m{
-        display: block;
-    }
 }
