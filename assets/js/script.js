@@ -74,4 +74,20 @@ $(document).ready(function () {
     // autoplay: true,
     // autoplaySpeed: 1000,
   });
+
+  $('.assessment-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: true,
+    draggable: false,
+    centerMode: true,
+    centerPadding: '6px',
+    prevArrow: `<button type='button' class='slick-prev slick-arrow'><ion-icon name="arrow-back-outline"></ion-icon></button>`,
+    nextArrow: `<button type='button' class='slick-next slick-arrow'><ion-icon name="arrow-forward-outline"></ion-icon></button>`,
+    dots: true,
+
+    // autoplay: true,
+    // autoplaySpeed: 1000,
+  });
 });
