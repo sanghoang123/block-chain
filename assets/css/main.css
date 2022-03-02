@@ -417,6 +417,7 @@ img {
 }
 .slider__item {
   flex-basis: 30%;
+  padding: 0 2rem;
 }
 .slider__item .image {
   display: flex;
@@ -424,10 +425,22 @@ img {
   padding: 5rem;
   border-left: 1px solid #42e8e0;
 }
+@media screen and (max-width: 767.98px) {
+  .slider__item .image {
+    padding: 3rem;
+  }
+}
+.slider__item .image.aboutus__image--border {
+  border: 15px solid #173e4a;
+}
 .slider__image {
   padding: 5rem 0;
   display: flex;
   justify-content: center;
+}
+.slider__image.slider__image--algin-start {
+  justify-content: start;
+  padding: 0;
 }
 .slider__title {
   font-weight: 600;
@@ -435,6 +448,26 @@ img {
   line-height: 2rem;
   color: #fff;
   text-align: center;
+  margin: 120px 0px;
+}
+@media screen and (max-width: 767.98px) {
+  .slider__title {
+    margin-bottom: 3rem;
+    margin-top: 6rem;
+  }
+}
+.slider__title.slider__title--center {
+  text-align: start;
+}
+.slider__desc {
+  font-size: 20px;
+  line-height: 120%;
+  color: #ffffff;
+}
+@media screen and (max-width: 767.98px) {
+  .slider__desc {
+    font-size: 12px;
+  }
 }
 .slider__btn {
   display: flex;
@@ -1351,6 +1384,11 @@ footer {
   height: auto;
   padding: 10rem 0;
 }
+@media screen and (max-width: 1199.98px) {
+  .hero {
+    padding: 5rem 0;
+  }
+}
 .hero__heading {
   font-size: 6.4rem;
   font-weight: 500;
@@ -1358,10 +1396,29 @@ footer {
   color: #02A4AE;
   padding: 20rem 0 30rem 10rem;
 }
+@media screen and (max-width: 1199.98px) {
+  .hero__heading {
+    padding: 8rem 0;
+    font-size: 5.2rem;
+    line-height: 5.4rem;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .hero__heading {
+    padding: 8rem 0;
+    font-size: 3.2rem;
+    line-height: 3.4rem;
+  }
+}
 .hero__block {
   display: flex;
   align-items: flex-start;
   gap: 0 5rem;
+}
+@media screen and (max-width: 767.98px) {
+  .hero__block {
+    flex-direction: column;
+  }
 }
 .hero__block-heading {
   font-size: 4.8rem;
@@ -1370,6 +1427,13 @@ footer {
   color: #fff;
   flex: 2;
 }
+@media screen and (max-width: 767.98px) {
+  .hero__block-heading {
+    padding-bottom: 1.6rem;
+    font-size: 28px;
+    line-height: 29px;
+  }
+}
 .hero__block-subtext {
   font-size: 1.8rem;
   font-weight: 400;
@@ -1377,62 +1441,19 @@ footer {
   color: #fff;
   flex: 5;
 }
+.hero__block-subtext span {
+  display: block;
+  padding-top: 2rem;
+}
 
-.slide-aboutus {
+.about__content {
   background: #002631;
+  padding-bottom: 12rem;
 }
-.slide-aboutus .slide-block {
-  position: relative;
-  overflow: hidden;
-}
-.slide-aboutus .slide-block .list-items {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  margin: 0 -1.5rem;
-}
-.slide-aboutus .slide-block .list-items .items {
-  width: calc(100%/3 );
-  padding: 1rem 1.5rem;
-}
-.slide-aboutus .slide-block .list-items .items .item {
-  padding: 7rem 6rem;
-  border: 0.6rem solid rgba(139, 139, 139, 0.295);
-}
-.slide-aboutus .slide-block .list-items .items .item-img {
-  width: 7rem;
-  height: 7rem;
-  object-fit: cover;
-  margin-bottom: 6rem;
-}
-.slide-aboutus .slide-block .list-items .items .item-heading {
-  color: #fff;
-  font-size: 2.6rem;
-  font-weight: 600;
-  line-height: 1.1;
-  margin-bottom: 8rem;
-}
-.slide-aboutus .slide-block .list-items .items .item-text {
-  color: #fff;
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 1.2;
-}
-.slide-aboutus .slide-block .list-items .items .d-none {
-  display: none;
-}
-.slide-aboutus .slide-block .button-slide {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-}
-.slide-aboutus .slide-block .button-slide .btn-prev {
-  margin: 0.1rem;
-  font-size: 3.2rem;
-  border: 1px solid #fff;
-  padding: 0.5rem 2rem;
-  line-height: 1;
+@media screen and (max-width: 767.98px) {
+  .about__content {
+    padding-bottom: 3rem;
+  }
 }
 
 .news-content {
@@ -1494,14 +1515,14 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   gap: 4rem calc(10% / 3);
-  margin-left: -1.6666666667%;
-  margin-right: -1.6666666667%;
+  margin-left: -calc(10%/6);
+  margin-right: -calc(10%/6);
 }
 @media screen and (max-width: 1199.98px) {
   .news__list {
     row-gap: 2rem;
-    margin-left: -2.5%;
-    margin-right: -2.5%;
+    margin-left: -calc(10%/4);
+    margin-right: -calc(10%/4);
   }
 }
 .news__item {
