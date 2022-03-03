@@ -1,0 +1,100 @@
+.ethereum-contract {
+    background-image: url(../img/ethereum-1.jpg);
+    // padding-top: 70%
+    height: 1217.68px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    &__head {
+        padding-top: 9.5rem;
+        display: flex;
+        &-heading {
+            font-weight: 600;
+            font-size: 42px;
+            line-height: 44px;
+            @include desktops {
+                font-size: 36px;
+                line-height: 40px;
+            }
+        }
+        &-desc {
+            margin-left: 9.5rem;
+            font-size: 24px;
+            line-height: 150%;
+            position: relative;
+            padding-top: 1rem;
+            @include desktops {
+                font-size: 20px;
+            }
+        }
+        &-desc::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 5px;
+            background: #00c1c1;
+        }
+    }
+    &__list {
+        display: flex;
+    }
+    &__item {
+    }
+
+    &__item:nth-child(even) {
+        margin-left: auto;
+    }
+    &__item:nth-child(1) {
+        margin-top: 9.1rem;
+    }
+
+    &__item:nth-child(2) {
+        margin-top: 3rem;
+    }
+
+    &__item:nth-child(1) .ethereum-contract__item-line,
+    &__item:nth-child(2) .ethereum-contract__item-line {
+        margin-top: 12rem;
+    }
+
+    &__contain {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-heading {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 31px;
+        }
+    }
+    &__contain.ethereum-contract__contain--reverse {
+        flex-direction: row-reverse;
+    }
+
+    &__block {
+        width: 480px;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+        border: 1px solid #00c1c1;
+        border-radius: 25px;
+    }
+    &__photo {
+        margin-right: 4rem;
+        width: 80px;
+        height: 80px;
+        padding: 2rem;
+        background: #173e4a;
+        border: 2px solid #3ccace;
+        border-radius: 15px;
+    }
+    &__desc {
+        padding-top: 3rem;
+        font-size: 16px;
+        line-height: 17px;
+    }
+}

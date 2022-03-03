@@ -186,6 +186,7 @@ img {
 }
 .navbar li {
   margin-left: 6rem;
+  position: relative;
 }
 .navbar li a {
   font-size: 2.2rem;
@@ -240,6 +241,80 @@ img {
   .navbar li {
     margin-left: 1.3rem;
   }
+}
+.navbar li .navbar-list {
+  display: none;
+  width: 296px;
+  position: absolute;
+  top: calc(300% + 15px);
+  left: 0;
+  background-color: #fff;
+  z-index: 10;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  border-top: 3px solid #02A4AE;
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .navbar li .navbar-list {
+    top: calc(300% + 5px);
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .navbar li .navbar-list {
+    top: calc(300% + 9px);
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .navbar li .navbar-list {
+    top: calc(300% - 1px);
+    width: 200px;
+  }
+}
+.navbar li .navbar-list li {
+  margin: 0;
+}
+.navbar li .navbar-list li a {
+  padding: 1rem 0;
+  font-size: 18px;
+  line-height: 19px;
+  color: #000000;
+}
+@media screen and (max-width: 767.98px) {
+  .navbar li .navbar-list li a {
+    padding: 0.6rem 0;
+    font-size: 12px;
+    line-height: 16px;
+    color: #000000;
+  }
+}
+.navbar li .navbar-list::before {
+  content: "";
+  position: absolute;
+  height: 5.5rem;
+  left: 0;
+  right: 0;
+  top: -20%;
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .navbar li .navbar-list::before {
+    height: 4.6rem;
+    top: -16%;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .navbar li .navbar-list::before {
+    height: 3.8rem;
+    top: -13%;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .navbar li .navbar-list::before {
+    height: 3.2rem;
+    top: -16%;
+  }
+}
+.navbar li.navbar__item-hover:hover .navbar-list {
+  display: block;
 }
 
 .navbar-active {
@@ -336,6 +411,14 @@ img {
   background-image: url(../img/bg-website-desin.png);
 }
 
+.banner.banner__ico-marketing--bg {
+  background-image: url(../img/bg-ico-marketing.png);
+}
+
+.banner.banner__smart-contract-develop--bg {
+  background-image: url(../img/banner-smart-contact-develop.jpg);
+}
+
 .intro {
   margin: 6rem 0 0 24rem;
   padding-bottom: 10rem;
@@ -415,6 +498,10 @@ img {
   background: #02A4AE;
   position: absolute;
   top: 0;
+}
+
+.intro.intro--marketing {
+  padding-bottom: 3rem;
 }
 
 .slider {
@@ -2127,6 +2214,272 @@ footer {
 .procedure.procedure__mobile .procedure__item:nth-child(9) {
   top: 81%;
   right: calc(18% - 10px);
+}
+
+.marketing-content {
+  position: relative;
+}
+
+.marketing-content::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 27%;
+  left: -14%;
+  background: url(../img/bg-ico-marketing-service.png);
+  mix-blend-mode: lighten;
+  border-radius: 60px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .marketing-content::before {
+    top: 24%;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .marketing-content::before {
+    top: 25%;
+    left: -20%;
+  }
+}
+@media (max-width: 575.98px) {
+  .marketing-content::before {
+    width: 100%;
+    height: 50%;
+    top: 27%;
+    left: -54%;
+  }
+}
+
+.marketing-service {
+  padding: 6rem 0;
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .marketing-service {
+    padding: 3rem 0;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .marketing-service {
+    padding: 2.4rem 0;
+  }
+}
+.marketing-service__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6rem;
+  justify-content: center;
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .marketing-service__list {
+    gap: 3rem;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .marketing-service__list {
+    gap: 2.4rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .marketing-service__list {
+    justify-content: stretch;
+    gap: 1.6rem;
+  }
+}
+.marketing-service__item {
+  padding: 4.5rem;
+  background: linear-gradient(90deg, #173e4a 4.56%, rgba(23, 62, 74, 0) 100%);
+  mix-blend-mode: luminosity;
+  border-radius: 5px;
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .marketing-service__item {
+    padding: 2.5rem;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .marketing-service__item {
+    padding: 1.6rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .marketing-service__item {
+    flex-basis: 45%;
+  }
+}
+.marketing-service__title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 150%;
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .marketing-service__title {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .marketing-service__title {
+    font-size: 18px;
+  }
+}
+
+.marketing-system__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+}
+@media (max-width: 575.98px) {
+  .marketing-system__list {
+    gap: 2rem;
+  }
+}
+.marketing-system__item {
+  background: linear-gradient(180deg, #173e4a 0%, rgba(23, 62, 74, 0) 100%);
+  border: 1px solid #00c1c1;
+  box-sizing: border-box;
+  border-radius: 25px;
+  padding: 6rem;
+  flex-basis: calc(25% - 4rem);
+}
+@media screen and (max-width: 1199.98px) {
+  .marketing-system__item {
+    padding: 2rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .marketing-system__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.marketing-system__photo {
+  width: 10rem;
+  padding: 2rem;
+  background: #173e4a;
+  border: 3px solid #3ccace;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+@media (max-width: 575.98px) {
+  .marketing-system__photo {
+    width: 7rem;
+    padding: 1rem;
+  }
+}
+.marketing-system__heading {
+  padding-top: 40px;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 34px;
+}
+@media (max-width: 575.98px) {
+  .marketing-system__heading {
+    padding-top: 2rem;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.ethereum-contract {
+  background-image: url(../img/ethereum-1.jpg);
+  height: 1217.68px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.ethereum-contract__head {
+  padding-top: 9.5rem;
+  display: flex;
+}
+.ethereum-contract__head-heading {
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 44px;
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .ethereum-contract__head-heading {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+.ethereum-contract__head-desc {
+  margin-left: 9.5rem;
+  font-size: 24px;
+  line-height: 150%;
+  position: relative;
+  padding-top: 1rem;
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .ethereum-contract__head-desc {
+    font-size: 20px;
+  }
+}
+.ethereum-contract__head-desc::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 5px;
+  background: #00c1c1;
+}
+.ethereum-contract__list {
+  display: flex;
+}
+.ethereum-contract__item:nth-child(even) {
+  margin-left: auto;
+}
+.ethereum-contract__item:nth-child(1) {
+  margin-top: 9.1rem;
+}
+.ethereum-contract__item:nth-child(2) {
+  margin-top: 3rem;
+}
+.ethereum-contract__item:nth-child(1) .ethereum-contract__item-line, .ethereum-contract__item:nth-child(2) .ethereum-contract__item-line {
+  margin-top: 12rem;
+}
+.ethereum-contract__contain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ethereum-contract__contain-heading {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 31px;
+}
+.ethereum-contract__contain.ethereum-contract__contain--reverse {
+  flex-direction: row-reverse;
+}
+.ethereum-contract__block {
+  width: 480px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  border: 1px solid #00c1c1;
+  border-radius: 25px;
+}
+.ethereum-contract__photo {
+  margin-right: 4rem;
+  width: 80px;
+  height: 80px;
+  padding: 2rem;
+  background: #173e4a;
+  border: 2px solid #3ccace;
+  border-radius: 15px;
+}
+.ethereum-contract__desc {
+  padding-top: 3rem;
+  font-size: 16px;
+  line-height: 17px;
 }
 
 /*# sourceMappingURL=main.css.map */

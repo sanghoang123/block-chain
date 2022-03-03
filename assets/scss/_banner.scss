@@ -71,6 +71,12 @@
 .banner.banner__ico-website--design {
     background-image: url(../img/bg-website-desin.png);
 }
+.banner.banner__ico-marketing--bg {
+    background-image: url(../img/bg-ico-marketing.png);
+}
+.banner.banner__smart-contract-develop--bg {
+    background-image: url(../img/banner-smart-contact-develop.jpg);
+}
 .intro {
     margin: 6rem 0 0 24rem;
     padding-bottom: 10rem;
@@ -138,4 +144,8 @@
             top: 0;
         }
     }
+}
+
+.intro.intro--marketing {
+    padding-bottom: 3rem;
 }
