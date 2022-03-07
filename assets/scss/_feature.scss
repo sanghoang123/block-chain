@@ -165,6 +165,7 @@
             margin-bottom: 20px;
             @include mobile {
                 flex-direction: column;
+                height: auto;
             }
 
             &__img-contain {
@@ -194,7 +195,7 @@
 
             &__info {
                 flex: 2;
-                padding: 10rem;
+                padding: 5rem 10rem;
                 background: linear-gradient(90deg, #003646 0%, rgba(0, 54, 70, 0.2) 100%);
                 @include tablet {
                     padding: 3rem;
@@ -221,6 +222,12 @@
                     /* or 30px */
 
                     color: #ffffff;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 8;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    word-break: break-word;
                     @include tablet {
                         font-size: 18px;
                     }
@@ -256,6 +263,10 @@
                     font-size: 1rem;
                 }
             }
+        }
+        .assessment.assessment--bg-smart-contract {
+            background: linear-gradient(180deg, #00c1c1 0%, rgba(23, 49, 57, 0) 100%);
+            backdrop-filter: blur(35.3483px);
         }
     }
 }

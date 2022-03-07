@@ -33,12 +33,28 @@
 }
 
 .marketing-service {
+    position: relative;
     padding: 6rem 0;
     @include desktops {
         padding: 3rem 0;
     }
     @include tablet {
         padding: 2.4rem 0;
+    }
+    &__heading {
+        width: 525.8px;
+        font-size: 42px;
+        line-height: 44px;
+        margin-bottom: 9rem;
+        @include tablet {
+            margin-bottom: 6rem;
+        }
+        @include mobile {
+            width: unset;
+            font-size: 28px;
+            line-height: 29px;
+            margin-bottom: 3rem;
+        }
     }
     &__list {
         display: flex;
@@ -82,6 +98,26 @@
         @include tablet {
             font-size: 18px;
         }
+    }
+}
+
+.marketing-service::before {
+    content: "";
+    position: absolute;
+    height: 130%;
+    width: 50%;
+    top: -40%;
+    right: 0;
+    background: url(../img/smart-contract-bg.png);
+    mix-blend-mode: lighten;
+    border-radius: 60px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: left center;
+    // transform: matrix(-1, 0, 0, 1, 0, 0);
+    @include mobile {
+        background-size: 150%;
+        top: -18%;
     }
 }
 

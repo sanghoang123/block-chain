@@ -36,6 +36,7 @@ img {
   display: block;
   max-width: 100%;
   max-height: 100%;
+  outline: none;
 }
 
 .btn--bg {
@@ -133,7 +134,7 @@ img {
     height: 5rem;
   }
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
   .header__nav-logo img {
     height: 5rem;
   }
@@ -232,7 +233,7 @@ img {
     margin-left: 3rem;
   }
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
   .navbar li {
     margin-left: 4rem;
   }
@@ -1234,6 +1235,7 @@ img {
 @media screen and (max-width: 767.98px) {
   .assessment-block .assessment-slider .assessment {
     flex-direction: column;
+    height: auto;
   }
 }
 .assessment-block .assessment-slider .assessment__img-contain {
@@ -1267,7 +1269,7 @@ img {
 }
 .assessment-block .assessment-slider .assessment__info {
   flex: 2;
-  padding: 10rem;
+  padding: 5rem 10rem;
   background: linear-gradient(90deg, #003646 0%, rgba(0, 54, 70, 0.2) 100%);
 }
 @media screen and (max-width: 1199.98px) {
@@ -1299,6 +1301,12 @@ img {
   line-height: 150%;
   /* or 30px */
   color: #ffffff;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
 }
 @media screen and (max-width: 1199.98px) {
   .assessment-block .assessment-slider .assessment__info-desc {
@@ -1342,6 +1350,10 @@ img {
   .assessment-block .assessment-slider .assessment__btn {
     font-size: 1rem;
   }
+}
+.assessment-block .assessment-slider .assessment.assessment--bg-smart-contract {
+  background: linear-gradient(180deg, #00c1c1 0%, rgba(23, 49, 57, 0) 100%);
+  backdrop-filter: blur(35.3483px);
 }
 
 .slick-arrow {
@@ -1615,7 +1627,7 @@ footer {
     padding: unset;
   }
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
   .parents {
     padding: unset;
   }
@@ -2254,6 +2266,7 @@ footer {
 }
 
 .marketing-service {
+  position: relative;
   padding: 6rem 0;
 }
 @media (min-width: 1200px) and (max-width: 1399.98px) {
@@ -2264,6 +2277,25 @@ footer {
 @media screen and (max-width: 1199.98px) {
   .marketing-service {
     padding: 2.4rem 0;
+  }
+}
+.marketing-service__heading {
+  width: 525.8px;
+  font-size: 42px;
+  line-height: 44px;
+  margin-bottom: 9rem;
+}
+@media screen and (max-width: 1199.98px) {
+  .marketing-service__heading {
+    margin-bottom: 6rem;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .marketing-service__heading {
+    width: unset;
+    font-size: 28px;
+    line-height: 29px;
+    margin-bottom: 3rem;
   }
 }
 .marketing-service__list {
@@ -2322,6 +2354,27 @@ footer {
 @media screen and (max-width: 1199.98px) {
   .marketing-service__title {
     font-size: 18px;
+  }
+}
+
+.marketing-service::before {
+  content: "";
+  position: absolute;
+  height: 130%;
+  width: 50%;
+  top: -40%;
+  right: 0;
+  background: url(../img/smart-contract-bg.png);
+  mix-blend-mode: lighten;
+  border-radius: 60px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: left center;
+}
+@media screen and (max-width: 767.98px) {
+  .marketing-service::before {
+    background-size: 150%;
+    top: -18%;
   }
 }
 
@@ -2388,15 +2441,41 @@ footer {
 
 .ethereum-contract {
   background-image: url(../img/ethereum-1.jpg);
-  height: 1217.68px;
+  padding-bottom: 2rem;
+  padding-top: -100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative;
+  background-color: #001d25;
+}
+@media screen and (max-width: 1199.98px) {
+  .ethereum-contract {
+    background-size: 160%;
+    padding-top: -200%;
+    background-position: top center;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .ethereum-contract {
+    background-size: 324%;
+    background-position: top -6px center;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  .ethereum-contract {
+    background-size: 260%;
+    background-position: top -141px center;
+  }
 }
 .ethereum-contract__head {
   padding-top: 9.5rem;
   display: flex;
+}
+@media screen and (max-width: 1199.98px) {
+  .ethereum-contract__head {
+    flex-direction: column;
+    padding-top: 6rem;
+  }
 }
 .ethereum-contract__head-heading {
   font-weight: 600;
@@ -2407,6 +2486,13 @@ footer {
   .ethereum-contract__head-heading {
     font-size: 36px;
     line-height: 40px;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .ethereum-contract__head-heading {
+    padding-bottom: 3rem;
+    font-size: 28px;
+    line-height: 29px;
   }
 }
 .ethereum-contract__head-desc {
@@ -2421,6 +2507,14 @@ footer {
     font-size: 20px;
   }
 }
+@media screen and (max-width: 1199.98px) {
+  .ethereum-contract__head-desc {
+    padding-top: 3rem;
+    margin-left: 0;
+    font-size: 12px;
+    line-height: 150%;
+  }
+}
 .ethereum-contract__head-desc::before {
   content: "";
   position: absolute;
@@ -2432,31 +2526,177 @@ footer {
 }
 .ethereum-contract__list {
   display: flex;
+  flex-wrap: wrap;
 }
-.ethereum-contract__item:nth-child(even) {
-  margin-left: auto;
+.ethereum-contract__item {
+  height: 100%;
+  flex-basis: 49%;
 }
-.ethereum-contract__item:nth-child(1) {
-  margin-top: 9.1rem;
+@media screen and (max-width: 1199.98px) {
+  .ethereum-contract__item {
+    width: 50%;
+  }
 }
-.ethereum-contract__item:nth-child(2) {
+@media screen and (max-width: 767.98px) {
+  .ethereum-contract__item {
+    width: 100%;
+  }
+}
+.ethereum-contract__item-line.ethereum-contract__item-line--size-50 {
+  width: 75%;
+}
+@media screen and (max-width: 767.98px) {
+  .ethereum-contract__list.ethereum-contract__list--pc {
+    display: none;
+  }
+}
+.ethereum-contract__item.ethereum-contract__item--pc:nth-child(odd) {
+  margin-right: 2rem;
+}
+@media screen and (max-width: 1199.98px) {
+  .ethereum-contract__item.ethereum-contract__item--pc:nth-child(odd) {
+    margin-right: 0;
+  }
+}
+.ethereum-contract__item.ethereum-contract__item--pc:nth-child(1) {
+  margin-top: 10rem;
+}
+.ethereum-contract__item.ethereum-contract__item--pc:nth-child(2) {
   margin-top: 3rem;
 }
-.ethereum-contract__item:nth-child(1) .ethereum-contract__item-line, .ethereum-contract__item:nth-child(2) .ethereum-contract__item-line {
-  margin-top: 12rem;
+.ethereum-contract__item.ethereum-contract__item--pc:nth-child(3) {
+  margin-top: 3rem;
+}
+.ethereum-contract__item.ethereum-contract__item--pc:nth-child(4) {
+  margin-top: -4rem;
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .ethereum-contract__item.ethereum-contract__item--pc:nth-child(4) .ethereum-contract__item-line {
+    margin-top: 1.6rem;
+  }
+}
+.ethereum-contract__item.ethereum-contract__item--pc:nth-child(6) {
+  margin-top: -4rem;
+}
+.ethereum-contract__item.ethereum-contract__item--pc:nth-child(6) .ethereum-contract__svg {
+  margin-top: -12rem;
+}
+.ethereum-contract__item.ethereum-contract__item--pc:nth-child(1) .ethereum-contract__item-line, .ethereum-contract__item.ethereum-contract__item--pc:nth-child(2) .ethereum-contract__item-line {
+  margin-top: 7rem;
+}
+.ethereum-contract__list.ethereum-contract__list--mobile {
+  display: none;
+}
+@media screen and (max-width: 767.98px) {
+  .ethereum-contract__list.ethereum-contract__list--mobile {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 10%;
+  }
+}
+@media screen and (max-width: 767.98px) and (max-width: 767.98px) {
+  .ethereum-contract__list.ethereum-contract__list--mobile {
+    margin-top: 85%;
+  }
+}
+@media screen and (max-width: 767.98px) and (min-width: 576px) and (max-width: 767.98px) {
+  .ethereum-contract__list.ethereum-contract__list--mobile {
+    margin-top: 71%;
+  }
+}
+.ethereum-contract__list.ethereum-contract__list--mobile .ethereum-contract__item {
+  margin-top: 2.4rem;
+  position: relative;
+}
+@media screen and (max-width: 767.98px) {
+  .ethereum-contract__list.ethereum-contract__list--mobile .ethereum-contract__item {
+    margin-top: 1.6rem;
+    padding: 0 3rem;
+  }
+}
+.ethereum-contract__list.ethereum-contract__list--mobile .ethereum-contract__item .ethereum-contract__svg {
+  position: absolute;
+}
+.ethereum-contract__list.ethereum-contract__list--mobile .ethereum-contract__item:nth-child(1) .ethereum-contract__svg {
+  bottom: calc(100% - 6px);
+  left: 18%;
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  .ethereum-contract__list.ethereum-contract__list--mobile .ethereum-contract__item:nth-child(1) .ethereum-contract__svg {
+    left: 20%;
+  }
+}
+.ethereum-contract__list.ethereum-contract__list--mobile .ethereum-contract__item:nth-child(2) .ethereum-contract__svg {
+  bottom: 64%;
+  left: 5%;
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  .ethereum-contract__list.ethereum-contract__list--mobile .ethereum-contract__item:nth-child(2) .ethereum-contract__svg {
+    left: calc(10% + 2px);
+  }
+}
+.ethereum-contract__list.ethereum-contract__list--mobile .ethereum-contract__item:nth-child(3) .ethereum-contract__svg {
+  bottom: 86%;
+  right: calc(0% + 10px);
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  .ethereum-contract__list.ethereum-contract__list--mobile .ethereum-contract__item:nth-child(3) .ethereum-contract__svg {
+    bottom: 90%;
+    right: calc(0% + 64px);
+  }
+}
+.ethereum-contract__list.ethereum-contract__list--mobile .ethereum-contract__item:nth-child(4) .ethereum-contract__svg {
+  bottom: 30%;
+  right: -2%;
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  .ethereum-contract__list.ethereum-contract__list--mobile .ethereum-contract__item:nth-child(4) .ethereum-contract__svg {
+    bottom: 30%;
+    right: calc(0% + 47px);
+  }
+}
+.ethereum-contract__list.ethereum-contract__list--mobile .ethereum-contract__item:nth-child(5) .ethereum-contract__svg {
+  bottom: 135%;
+  left: -5px;
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  .ethereum-contract__list.ethereum-contract__list--mobile .ethereum-contract__item:nth-child(5) .ethereum-contract__svg {
+    left: 48px;
+  }
 }
 .ethereum-contract__contain {
+  width: 90%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+}
+@media screen and (max-width: 1199.98px) {
+  .ethereum-contract__contain {
+    width: unset;
+    justify-content: center;
+  }
 }
 .ethereum-contract__contain-heading {
   font-weight: 600;
   font-size: 30px;
   line-height: 31px;
 }
+@media screen and (max-width: 1199.98px) {
+  .ethereum-contract__contain-heading {
+    font-size: 20px;
+    line-height: 21px;
+  }
+}
+.ethereum-contract__contain.ethereum-contract__contain--no-align {
+  align-items: stretch;
+}
 .ethereum-contract__contain.ethereum-contract__contain--reverse {
   flex-direction: row-reverse;
+}
+.ethereum-contract__svg {
+  text-align: right;
 }
 .ethereum-contract__block {
   width: 480px;
@@ -2467,19 +2707,132 @@ footer {
   border: 1px solid #00c1c1;
   border-radius: 25px;
 }
+.ethereum-contract__block-head {
+  display: flex;
+  align-items: center;
+}
 .ethereum-contract__photo {
-  margin-right: 4rem;
-  width: 80px;
-  height: 80px;
+  margin-right: 2rem;
   padding: 2rem;
   background: #173e4a;
   border: 2px solid #3ccace;
   border-radius: 15px;
+  line-height: 8rem;
+}
+.ethereum-contract__photo img {
+  width: 100%;
 }
 .ethereum-contract__desc {
   padding-top: 3rem;
   font-size: 16px;
   line-height: 17px;
+}
+@media screen and (max-width: 1199.98px) {
+  .ethereum-contract__desc {
+    padding-top: 1.6rem;
+    font-size: 12px;
+    line-height: 13px;
+  }
+}
+
+.smart-contract-block {
+  padding: 8rem 0 16rem;
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .smart-contract-block {
+    padding: 0 0 8rem;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .smart-contract-block {
+    padding: 0 0 6rem;
+  }
+}
+.smart-contract-block .smart-contract__title {
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 44px;
+  padding-bottom: 10rem;
+}
+@media screen and (max-width: 1199.98px) {
+  .smart-contract-block .smart-contract__title {
+    padding-bottom: 6rem;
+  }
+}
+.smart-contract-block .smart-contract__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6rem;
+}
+@media screen and (max-width: 1199.98px) {
+  .smart-contract-block .smart-contract__list {
+    gap: 3rem;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .smart-contract-block .smart-contract__list {
+    gap: 2.4rem 0;
+    justify-content: center;
+  }
+}
+.smart-contract-block .smart-contract__item {
+  width: 100%;
+  flex: 0 calc(50% - 6rem);
+  padding: 3rem;
+  background: radial-gradient(53.37% 71.59% at 12.25% 25.9%, #00c1c1 0%, rgba(23, 62, 74, 0) 100%);
+  border: 1px solid #00c1c1;
+  border-radius: 25px;
+}
+@media screen and (max-width: 1199.98px) {
+  .smart-contract-block .smart-contract__item {
+    flex: 0 calc(50% - 3rem);
+    padding: 2.4rem;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .smart-contract-block .smart-contract__item {
+    flex: 0 100%;
+  }
+}
+.smart-contract-block .smart-contract__head {
+  display: flex;
+  align-items: center;
+  padding-bottom: 3rem;
+}
+.smart-contract-block .smart-contract__head-heading {
+  width: 50%;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 31px;
+  padding-left: 4rem;
+}
+@media screen and (max-width: 1199.98px) {
+  .smart-contract-block .smart-contract__head-heading {
+    padding-left: 3rem;
+    font-size: 20px;
+    line-height: 21px;
+  }
+}
+.smart-contract-block .smart-contract__head .smart-contract__photo {
+  width: 8rem;
+  padding: 1.8rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid #3ccace;
+  border-radius: 15px;
+}
+.smart-contract-block .smart-contract__desc {
+  list-style: inside;
+}
+.smart-contract-block .smart-contract__desc li {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+@media screen and (max-width: 1199.98px) {
+  .smart-contract-block .smart-contract__desc li {
+    font-size: 12px;
+    line-height: 150%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

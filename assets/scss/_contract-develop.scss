@@ -1,14 +1,32 @@
 .ethereum-contract {
     background-image: url(../img/ethereum-1.jpg);
-    // padding-top: 70%
-    height: 1217.68px;
+    padding-bottom: 2rem;
+    padding-top: -100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    position: relative;
+    background-color: #001d25;
+    @include tablet {
+        background-size: 160%;
+        padding-top: -200%;
+        background-position: top center;
+    }
+    @include mobile {
+        background-size: 324%;
+        background-position: top -6px center;
+    }
+    @include phone-l {
+        background-size: 260%;
+        background-position: top -141px center;
+    }
     &__head {
         padding-top: 9.5rem;
         display: flex;
+        @include tablet {
+            flex-direction: column;
+            padding-top: 6rem;
+        }
+
         &-heading {
             font-weight: 600;
             font-size: 42px;
@@ -16,6 +34,11 @@
             @include desktops {
                 font-size: 36px;
                 line-height: 40px;
+            }
+            @include tablet {
+                padding-bottom: 3rem;
+                font-size: 28px;
+                line-height: 29px;
             }
         }
         &-desc {
@@ -26,6 +49,12 @@
             padding-top: 1rem;
             @include desktops {
                 font-size: 20px;
+            }
+            @include tablet {
+                padding-top: 3rem;
+                margin-left: 0;
+                font-size: 12px;
+                line-height: 150%;
             }
         }
         &-desc::before {
@@ -40,38 +69,173 @@
     }
     &__list {
         display: flex;
+        flex-wrap: wrap;
     }
+
     &__item {
+        height: 100%;
+        flex-basis: 49%;
+        @include tablet {
+            width: 50%;
+        }
+        @include mobile {
+            width: 100%;
+        }
+        &-line.ethereum-contract__item-line--size-50 {
+            width: 75%;
+        }
+    }
+    // item pc
+
+    &__list.ethereum-contract__list--pc {
+        @include mobile {
+            display: none;
+        }
     }
 
-    &__item:nth-child(even) {
-        margin-left: auto;
-    }
-    &__item:nth-child(1) {
-        margin-top: 9.1rem;
+    &__item.ethereum-contract__item--pc:nth-child(odd) {
+        margin-right: 2rem;
+        @include tablet {
+            margin-right: 0;
+        }
     }
 
-    &__item:nth-child(2) {
+    &__item.ethereum-contract__item--pc:nth-child(1) {
+        margin-top: 10rem;
+    }
+
+    &__item.ethereum-contract__item--pc:nth-child(2) {
         margin-top: 3rem;
     }
 
-    &__item:nth-child(1) .ethereum-contract__item-line,
-    &__item:nth-child(2) .ethereum-contract__item-line {
-        margin-top: 12rem;
+    &__item.ethereum-contract__item--pc:nth-child(3) {
+        margin-top: 3rem;
+    }
+
+    &__item.ethereum-contract__item--pc:nth-child(4) {
+        margin-top: -4rem;
+        .ethereum-contract__item-line {
+            @include desktops {
+                margin-top: 1.6rem;
+            }
+        }
+    }
+
+    &__item.ethereum-contract__item--pc:nth-child(6) {
+        margin-top: -4rem;
+        .ethereum-contract__svg {
+            margin-top: -12rem;
+        }
+    }
+
+    &__item.ethereum-contract__item--pc:nth-child(1) .ethereum-contract__item-line,
+    &__item.ethereum-contract__item--pc:nth-child(2) .ethereum-contract__item-line {
+        margin-top: 7rem;
+    }
+
+    //end item pc
+
+    &__list.ethereum-contract__list--mobile {
+        display: none;
+        @include mobile {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin-top: 10%;
+
+            @include mobile {
+                margin-top: 85%;
+            }
+
+            @include phone-l {
+                margin-top: 71%;
+            }
+        }
+        .ethereum-contract__item {
+            margin-top: 2.4rem;
+            position: relative;
+            @include mobile {
+                margin-top: 1.6rem;
+                padding: 0 3rem;
+            }
+        }
+
+        .ethereum-contract__item .ethereum-contract__svg {
+            position: absolute;
+        }
+
+        .ethereum-contract__item:nth-child(1) .ethereum-contract__svg {
+            bottom: calc(100% - 6px);
+            left: 18%;
+            @include phone-l {
+                left: 20%;
+            }
+        }
+
+        .ethereum-contract__item:nth-child(2) .ethereum-contract__svg {
+            bottom: 64%;
+            left: 5%;
+            @include phone-l {
+                left: calc(10% + 2px);
+            }
+        }
+
+        .ethereum-contract__item:nth-child(3) .ethereum-contract__svg {
+            bottom: 86%;
+            right: calc(0% + 10px);
+            @include phone-l {
+                bottom: 90%;
+                right: calc(0% + 64px);
+            }
+        }
+
+        .ethereum-contract__item:nth-child(4) .ethereum-contract__svg {
+            bottom: 30%;
+            right: -2%;
+            @include phone-l {
+                bottom: 30%;
+                right: calc(0% + 47px);
+            }
+        }
+
+        .ethereum-contract__item:nth-child(5) .ethereum-contract__svg {
+            bottom: 135%;
+            left: -5px;
+            @include phone-l {
+                left: 48px;
+            }
+        }
     }
 
     &__contain {
+        width: 90%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        @include tablet {
+            width: unset;
+            justify-content: center;
+        }
         &-heading {
             font-weight: 600;
             font-size: 30px;
             line-height: 31px;
+            @include tablet {
+                font-size: 20px;
+                line-height: 21px;
+            }
         }
+    }
+    &__contain.ethereum-contract__contain--no-align {
+        align-items: stretch;
     }
     &__contain.ethereum-contract__contain--reverse {
         flex-direction: row-reverse;
+    }
+
+    &__svg {
+        text-align: right;
     }
 
     &__block {
@@ -82,19 +246,116 @@
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
         border: 1px solid #00c1c1;
         border-radius: 25px;
+        &-head {
+            display: flex;
+            align-items: center;
+        }
     }
     &__photo {
-        margin-right: 4rem;
-        width: 80px;
-        height: 80px;
+        margin-right: 2rem;
         padding: 2rem;
         background: #173e4a;
         border: 2px solid #3ccace;
         border-radius: 15px;
+        line-height: 8rem;
+        img {
+            width: 100%;
+        }
     }
     &__desc {
         padding-top: 3rem;
         font-size: 16px;
         line-height: 17px;
+        @include tablet {
+            padding-top: 1.6rem;
+            font-size: 12px;
+            line-height: 13px;
+        }
+    }
+}
+
+// contract-item
+.smart-contract-block {
+    padding: 8rem 0 16rem;
+    @include desktops {
+        padding: 0 0 8rem;
+    }
+    @include tablet {
+        padding: 0 0 6rem;
+    }
+    .smart-contract {
+        &__title {
+            font-weight: 600;
+            font-size: 42px;
+            line-height: 44px;
+            padding-bottom: 10rem;
+            @include tablet {
+                padding-bottom: 6rem;
+            }
+        }
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6rem;
+            @include tablet {
+                gap: 3rem;
+            }
+            @include mobile {
+                gap: 2.4rem 0;
+                justify-content: center;
+            }
+        }
+        &__item {
+            width: 100%;
+            flex: 0 calc(50% - 6rem);
+            padding: 3rem;
+            background: radial-gradient(53.37% 71.59% at 12.25% 25.9%, #00c1c1 0%, rgba(23, 62, 74, 0) 100%);
+            border: 1px solid #00c1c1;
+            border-radius: 25px;
+            @include tablet {
+                flex: 0 calc(50% - 3rem);
+                padding: 2.4rem;
+            }
+            @include mobile {
+                flex: 0 100%;
+            }
+        }
+
+        &__head {
+            display: flex;
+            align-items: center;
+            padding-bottom: 3rem;
+            &-heading {
+                width: 50%;
+                font-weight: 600;
+                font-size: 30px;
+                line-height: 31px;
+                padding-left: 4rem;
+                @include tablet {
+                    padding-left: 3rem;
+                    font-size: 20px;
+                    line-height: 21px;
+                }
+            }
+            .smart-contract__photo {
+                width: 8rem;
+                padding: 1.8rem;
+                background: rgba(255, 255, 255, 0.15);
+                border: 2px solid #3ccace;
+                border-radius: 15px;
+            }
+        }
+        &__desc {
+            list-style: inside;
+            li {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                @include tablet {
+                    font-size: 12px;
+                    line-height: 150%;
+                }
+            }
+        }
     }
 }
