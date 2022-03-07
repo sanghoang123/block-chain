@@ -2712,6 +2712,7 @@ footer {
   align-items: center;
 }
 .ethereum-contract__photo {
+  min-width: 80px;
   margin-right: 2rem;
   padding: 2rem;
   background: #173e4a;
