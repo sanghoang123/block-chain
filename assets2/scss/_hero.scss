@@ -1,0 +1,218 @@
+.hero {
+  width: 100%;
+  background: $bg-color url(".././image/bg_hero.png") no-repeat center / cover;
+}
+.container {
+  > .hero__heading {
+    padding: 39rem 0;
+    max-width: 59rem;
+  }
+}
+.hero__heading {
+  &-title {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 3rem;
+  }
+  &-subtitle {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+.hero__block {
+  .hero__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 16rem;
+    &-title {
+      padding-right: 7rem;
+      flex-basis: 40%;
+    }
+    &-subtitle {
+      flex-basis: 60%;
+      position: relative;
+      padding-top: 20px;
+    }
+    &-subtitle.subtitle-line {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 5px;
+        background-color: #00c1c1;
+      }
+    }
+  }
+}
+
+@include desktops() {
+  .hero__block {
+    .hero__heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 12rem;
+      &-title {
+        padding-right: 7rem;
+        flex-basis: 40%;
+        font-size: 40px;
+      }
+      &-subtitle {
+        flex-basis: 60%;
+        position: relative;
+        padding-top: 20px;
+        font-size: 20px;
+      }
+      &-subtitle.subtitle-line {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 50px;
+          height: 5px;
+          background-color: #00c1c1;
+        }
+      }
+    }
+  }
+}
+@include phone() {
+  .hero {
+    width: 100%;
+    background: $bg-color url(".././image/bg_hero.png") no-repeat top left /
+      contain;
+  }
+  .container {
+    > .hero__heading {
+      padding: 27rem 0 6rem;
+      max-width: 59rem;
+    }
+  }
+  .hero__heading {
+    &-title {
+      font-family: SVN-Poppins;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 34px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+    &-subtitle {
+      font-family: SVN-Poppins;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+  .hero__block {
+    .hero__heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      margin-bottom: 6rem;
+      &-title {
+        padding-right: 7rem;
+        flex-basis: 40%;
+      }
+      &-subtitle {
+        flex-basis: 60%;
+        position: relative;
+        padding-top: 20px;
+      }
+      &-subtitle.subtitle-line {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 50px;
+          height: 3px;
+          background-color: #00c1c1;
+        }
+      }
+    }
+  }
+}
+@include ipad() {
+  .hero {
+    width: 100%;
+    background: $bg-color url(".././image/bg_hero.png") no-repeat top left /
+      contain;
+  }
+  .container {
+    > .hero__heading {
+      padding: 27rem 0 6rem;
+      max-width: 59rem;
+    }
+  }
+  .hero__heading {
+    &-title {
+      font-family: SVN-Poppins;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 34px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+    &-subtitle {
+      font-family: SVN-Poppins;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+  .hero__block {
+    .hero__heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      margin-bottom: 6rem;
+      &-title {
+        padding-right: 7rem;
+        flex-basis: 40%;
+      }
+      &-subtitle {
+        flex-basis: 60%;
+        position: relative;
+        padding-top: 20px;
+      }
+      &-subtitle.subtitle-line {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 50px;
+          height: 3px;
+          background-color: #00c1c1;
+        }
+      }
+    }
+  }
+}
