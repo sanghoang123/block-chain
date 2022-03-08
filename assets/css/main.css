@@ -1514,7 +1514,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 4rem calc(10% / 3);
+  gap: 4rem 3.3333333333%;
   margin-left: -calc(10%/6);
   margin-right: -calc(10%/6);
 }
@@ -1531,7 +1531,7 @@ footer {
 }
 @media screen and (max-width: 1199.98px) {
   .news__item {
-    flex-basis: calc(45%);
+    flex-basis: 45%;
   }
 }
 @media screen and (max-width: 767.98px) {
