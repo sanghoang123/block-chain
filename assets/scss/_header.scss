@@ -87,6 +87,7 @@
     justify-content: space-between;
     li {
         margin-left: 6rem;
+        position: relative;
         a {
             font-size: 2.2rem;
             font-weight: 500;
@@ -125,6 +126,68 @@
         @include phone {
             margin-left: 1.3rem;
         }
+
+        .navbar-list {
+            display: none;
+            width: 296px;
+            position: absolute;
+            top: calc(300% + 15px);
+            left: 0;
+            background-color: $white;
+            z-index: 10;
+            padding-left: 1rem;
+            padding-top: 1rem;
+            border-top: 3px solid $bg-block;
+            @include desktops {
+                top: calc(300% + 10px);
+            }
+            @include tablet {
+                top: calc(300% + 9px);
+            }
+            @include mobile {
+                top: calc(300% - 1px);
+                width: 200px;
+            }
+            li {
+                margin: 0;
+                a {
+                    padding: 1rem 0;
+                    font-size: 18px;
+                    line-height: 19px;
+                    color: #000000;
+                    @include mobile {
+                        padding: 0.6rem 0;
+                        font-size: 12px;
+                        line-height: 16px;
+                        color: #000000;
+                    }
+                }
+            }
+        }
+        .navbar-list::before {
+            content: "";
+            position: absolute;
+            height: 5.5rem;
+            left: 0;
+            right: 0;
+            top: -20%;
+            @include desktops {
+                height: 4.6rem;
+                top: -16%;
+            }
+            @include tablet {
+                height: 3.8rem;
+                top: -13%;
+            }
+            @include mobile {
+                height: 3.2rem;
+                top: -16%;
+            }
+        }
+    }
+
+    li.navbar__item-hover:hover .navbar-list {
+        display: block;
     }
 }
 .navbar-active {

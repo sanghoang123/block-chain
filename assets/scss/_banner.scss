@@ -6,6 +6,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top left;
+
     // margin-bottom: 20rem;
     @include mobile {
         padding-top: 70%;
@@ -49,6 +50,7 @@
             @include phone {
                 font-size: 3.2rem;
                 line-height: 3.36rem;
+                padding-right: 1rem;
             }
         }
         &-text {
@@ -66,10 +68,25 @@
         }
     }
 }
+.banner.banner__ico-website--design {
+    background-image: url(../img/bg-website-desin.png);
+}
+.banner.banner__ico-marketing--bg {
+    background-image: url(../img/bg-ico-marketing.png);
+}
+.banner.banner__smart-contract-develop--bg {
+    background-image: url(../img/banner-smart-contact-develop.jpg);
+}
+.banner.banner__wallet-develop--bg {
+    background-image: url(../img/bg-wallet-develop.jpg);
+}
+.banner.banner__cryptocurrency--bg {
+    background-image: url(../img/cryptocurrency-banner-bg.jpg);
+}
 .intro {
-    margin: 6rem 0 10rem 24rem;
-    margin-top: 6rem;
-    margin-bottom: 10rem;
+    margin: 6rem 0 0 24rem;
+    padding-bottom: 10rem;
+
     @include desktops {
         margin-left: 18rem;
     }
@@ -81,7 +98,11 @@
         align-content: center;
         justify-items: flex-start;
         flex-direction: row;
+        // padding-top: 12rem;
         margin-bottom: 10rem;
+        @include desktops {
+            padding-top: 6rem;
+        }
         @include phone {
             flex-direction: column;
             margin-bottom: 6rem;
@@ -133,4 +154,8 @@
             top: 0;
         }
     }
+}
+
+.intro.intro--marketing {
+    padding-bottom: 3rem;
 }
