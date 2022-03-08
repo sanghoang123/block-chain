@@ -202,8 +202,8 @@ img {
 }
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   .navbar li a {
-    font-size: 1.8rem;
-    line-height: 1.8rem;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
@@ -349,7 +349,7 @@ img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 50%;
+  width: 40%;
 }
 @media screen and (max-width: 1199.98px) {
   .banner__title {
@@ -433,12 +433,12 @@ img {
 }
 
 .intro {
-  margin: 6rem 0 0 24rem;
+  margin: 6rem 0 0 0;
   padding-bottom: 10rem;
 }
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   .intro {
-    margin-left: 18rem;
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 1199.98px) {
@@ -468,7 +468,7 @@ img {
   margin-bottom: 0;
 }
 .intro__heading {
-  flex-basis: 40%;
+  flex-basis: 35%;
   color: #fff;
   font-size: 4.8rem;
   font-weight: 600;
@@ -485,7 +485,7 @@ img {
   }
 }
 .intro__block {
-  flex-basis: 60%;
+  flex-basis: 65%;
 }
 .intro__block-text {
   color: #fff;
@@ -2090,7 +2090,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 4rem 3.3333333333%;
+  gap: 4rem calc(10% / 3);
   margin-left: -calc(10%/6);
   margin-right: -calc(10%/6);
 }
@@ -2107,7 +2107,7 @@ footer {
 }
 @media screen and (max-width: 1199.98px) {
   .news__item {
-    flex-basis: 45%;
+    flex-basis: calc(45%);
   }
 }
 @media screen and (max-width: 767.98px) {
