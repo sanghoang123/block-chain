@@ -84,6 +84,15 @@
         padding-bottom: 3rem;
     }
 }
+.about-block {
+    .about__title {
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 44px;
+        margin-bottom: 10rem;
+    }
+}
+
 .about-parent {
     display: flex;
     justify-content: space-between;

@@ -1,54 +1,57 @@
-.contactus-heading{
+.contactus-heading {
     background: $bg-color;
     padding: 15rem 0;
-    h2{
+    h2 {
         font-size: 6.4rem;
         font-weight: 500;
         color: $bg-block;
         margin: 0 24rem;
     }
 }
-.parents{
+.parents {
     padding: 16rem 24rem;
 }
-.contact__form{
-    background: #E5F9F9;
+.contact__form {
+    background: #e5f9f9;
     padding: 10rem;
     width: 100%;
-    &-title{
+    color: $black;
+    &-title {
         display: block;
         font-size: 3.2rem;
         font-weight: 500;
         line-height: 1.1;
         margin-bottom: 6.4rem;
     }
-    &-text{
+    &-text {
         display: block;
         font-size: 1.8rem;
         font-weight: 400;
         padding: 1rem 0;
     }
-    .name{
+    .name {
         display: flex;
         gap: 0 1.6rem;
-        .first-name{
+        .first-name {
             flex: 1;
         }
-        .last-name{
+        .last-name {
             flex: 1;
         }
     }
-    input, select, textarea{
+    input,
+    select,
+    textarea {
         width: 100%;
         padding: 1.6rem;
         outline: none;
-        border-radius: .5rem;
-        border: 1px solid rgba(61, 68, 78, 0.281) ;
+        border-radius: 0.5rem;
+        border: 1px solid rgba(61, 68, 78, 0.281);
     }
-    .btn-submit{
+    .btn-submit {
         background: $bg-color;
         padding: 1.2rem 4.8rem;
-        border-radius: .5rem;
+        border-radius: 0.5rem;
         font-size: 2rem;
         outline: none;
         border: unset;
@@ -56,113 +59,124 @@
         margin-top: 6.4rem;
     }
 }
-@include phone(){
-    .contactus-heading{
+@include phone() {
+    .contactus-heading {
         background: $bg-color;
         padding: 3rem 0;
-        h2{
+        h2 {
             font-size: 3rem;
-            margin:unset;
+            margin: unset;
         }
     }
-    .contact__form{
+    .contact__form {
         padding: 3rem;
         margin: 3rem 0;
-        &-title{
+        color: $black;
+        &-title {
             font-size: 2.2rem;
             margin-bottom: 3rem;
         }
-        &-text{
+        &-text {
             font-size: 1.2rem;
             padding: 1rem 0;
         }
-        .name{
+        .name {
             display: flex;
             gap: 0 1.6rem;
-            .first-name{
+            .first-name {
                 flex: 1;
             }
-            .last-name{
+            .last-name {
                 flex: 1;
             }
         }
-        input, select, textarea{
+        input,
+        select,
+        textarea {
             width: 100%;
             padding: 1.6rem;
             outline: none;
-            border-radius: .5rem;
-            border: 1px solid rgba(61, 68, 78, 0.281) ;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(61, 68, 78, 0.281);
         }
-        .btn-submit{
+        .btn-submit {
             background: $bg-color;
-            padding: .9rem 1.2rem;
-            border-radius: .5rem;
+            padding: 0.9rem 1.2rem;
+            border-radius: 0.5rem;
             font-size: 1.8rem;
             margin-top: 3.9rem;
             min-width: 9rem;
         }
     }
-    .parents{
+    .parents {
         padding: unset;
     }
 }
-@include phone-l(){.parents{
-    padding: unset;
-}}
-@include mobile(){.parents{
-    padding: unset;
-}}
-@include ipad(){.parents{
-    padding: unset;
-}}
-@include tablet(){
-    .contactus-heading{
+@include phone-l() {
+    .parents {
+        padding: unset;
+    }
+}
+@include mobile() {
+    .parents {
+        padding: unset;
+    }
+}
+@include ipad() {
+    .parents {
+        padding: unset;
+    }
+}
+@include tablet() {
+    .contactus-heading {
         background: $bg-color;
         padding: 6rem 0;
-        h2{
+        h2 {
             font-size: 4.8rem;
             font-weight: 500;
             color: $bg-block;
             margin: unset;
         }
     }
-    .contact__form{
+    .contact__form {
         padding: 3rem;
         margin: 3rem 0;
-        &-title{
+        &-title {
             font-size: 2.2rem;
             margin-bottom: 3rem;
         }
-        &-text{
+        &-text {
             font-size: 1.2rem;
             padding: 1rem 0;
         }
-        .name{
+        .name {
             display: flex;
             gap: 0 1.6rem;
-            .first-name{
+            .first-name {
                 flex: 1;
             }
-            .last-name{
+            .last-name {
                 flex: 1;
             }
         }
-        input, select, textarea{
+        input,
+        select,
+        textarea {
             width: 100%;
             padding: 1.6rem;
             outline: none;
-            border-radius: .5rem;
-            border: 1px solid rgba(61, 68, 78, 0.281) ;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(61, 68, 78, 0.281);
         }
-        .btn-submit{
+        .btn-submit {
             background: $bg-color;
-            padding: .9rem 1.2rem;
-            border-radius: .5rem;
+            padding: 0.9rem 1.2rem;
+            border-radius: 0.5rem;
             font-size: 1.8rem;
             margin-top: 3.9rem;
             min-width: 9rem;
         }
     }
 }
-@include desktops(){
+@include desktops() {
 }

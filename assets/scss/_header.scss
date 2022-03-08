@@ -139,7 +139,7 @@
             padding-top: 1rem;
             border-top: 3px solid $bg-block;
             @include desktops {
-                top: calc(300% + 5px);
+                top: calc(300% + 10px);
             }
             @include tablet {
                 top: calc(300% + 9px);

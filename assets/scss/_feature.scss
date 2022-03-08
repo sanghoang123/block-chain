@@ -271,6 +271,86 @@
     }
 }
 
+.wallet-feature {
+    position: relative;
+    &__title {
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 44px;
+        padding-bottom: 10rem;
+        @include mobile {
+            font-size: 28px;
+            line-height: 29px;
+            padding-bottom: 3rem;
+        }
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 6rem;
+        @include tablet {
+            gap: 3rem;
+            justify-content: center;
+        }
+    }
+    &__item {
+        flex: 0 calc(33.3333% - 6rem);
+        padding: 3rem;
+        background: radial-gradient(57.1% 97.49% at 50% 0%, #00c1c1 0%, rgba(23, 62, 74, 0) 100%);
+        border: 1px solid #00c1c1;
+        box-sizing: border-box;
+        border-radius: 25px;
+        @include tablet {
+            flex: 0 calc(50% - 3rem);
+        }
+        @include mobile {
+            flex: 0 100%;
+            background: radial-gradient(53.37% 71.59% at 12.25% 25.9%, #00c1c1 0%, rgba(23, 62, 74, 0) 100%);
+        }
+        &-heading {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 31px;
+            margin-bottom: 3rem;
+        }
+        &-desc {
+            font-size: 16px;
+            line-height: 150%;
+        }
+    }
+}
+.wallet-feature::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: -50%;
+    left: -13%;
+    background: linear-gradient(178deg, #00c1c1 -132%, rgba(0, 0, 0, 0) 91%), url(../img/bg-wallet-develop-icon.jpg);
+    mix-blend-mode: lighten;
+    transform: rotate(10deg);
+    border-radius: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include desktops {
+        left: -15%;
+    }
+    @include tablet {
+        width: 100%;
+        left: -40%;
+        transform: rotate(6deg);
+    }
+    @include mobile {
+        width: 100%;
+        left: -50%;
+        transform: rotate(12deg);
+        height: 50%;
+        top: -2%;
+    }
+}
+
 .slick-arrow {
     position: absolute;
     top: 50%;
