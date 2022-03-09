@@ -80,6 +80,9 @@
 .about__content {
     background: $bg-color;
     padding-bottom: 12rem;
+    @include desktops {
+        padding-bottom: 10rem;
+    }
     @include mobile {
         padding-bottom: 3rem;
     }

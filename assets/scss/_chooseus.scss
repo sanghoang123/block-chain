@@ -7,7 +7,7 @@
         flex-direction: column;
     }
     @include phone {
-        padding: 6rem 0;
+        padding: 3rem 0;
     }
     &__banner {
         display: flex;
@@ -89,7 +89,7 @@
                     border-bottom: 1px solid $white;
                     padding-bottom: 10rem;
                     @include phone {
-                        padding-bottom: 4rem;
+                        padding-bottom: 0;
                     }
                 }
                 .info-block {
@@ -111,7 +111,19 @@
                     &-icon {
                         font-size: 3rem;
                         font-weight: 600;
+                        width: 50%;
                     }
+                }
+            }
+            &-info:hover {
+                background-color: $white;
+                transition: all 0.3s ease-in;
+                .info-icon {
+                    color: $bg-block;
+                    border-bottom: 1px solid $bg-block;
+                }
+                .info-block {
+                    color: $bg-block;
                 }
             }
             &-info--img {

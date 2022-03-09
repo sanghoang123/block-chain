@@ -87,8 +87,8 @@
 .banner.banner__marketing-guide--bg {
     background-image: url(../img/marketing-guide-banner.jpg);
 }
+
 .intro {
-    margin: 6rem 0 0 0;
     padding-bottom: 10rem;
 
     @include desktops {
@@ -102,18 +102,15 @@
         align-content: center;
         justify-items: flex-start;
         flex-direction: row;
-        // padding-top: 12rem;
-        margin-bottom: 10rem;
-        @include desktops {
-            padding-top: 6rem;
-        }
+        padding-top: 6rem;
+
         @include phone {
             flex-direction: column;
-            margin-bottom: 6rem;
+            padding-top: 4rem;
         }
     }
     &__contain + &__contain {
-        margin-bottom: 0;
+        padding-top: 6rem;
     }
     &__heading {
         flex-basis: 35%;

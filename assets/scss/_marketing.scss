@@ -88,6 +88,11 @@
         }
     }
 
+    &__item:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
     &__title {
         font-weight: 600;
         font-size: 32px;
@@ -138,6 +143,7 @@
         border-radius: 25px;
         padding: 6rem;
         flex-basis: calc(25% - 4rem);
+        z-index: 1;
 
         @include tablet {
             padding: 2rem;
@@ -148,6 +154,11 @@
             align-items: center;
             justify-content: center;
         }
+    }
+    &__item:hover {
+        border: 1px solid $white;
+        cursor: pointer;
+        background: linear-gradient(90deg, #003646 0%, rgba(0, 54, 70, 0.2) 100%);
     }
     &__photo {
         width: 10rem;

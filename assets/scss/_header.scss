@@ -79,6 +79,9 @@
                 font-size: 1.8rem;
             }
         }
+        &-icon:hover {
+            color: $bg-block;
+        }
     }
 }
 .navbar {
@@ -114,6 +117,9 @@
                 font-size: 1rem;
             }
         }
+        a:hover {
+            color: $bg-block;
+        }
         @include desktops {
             margin-left: 5rem;
         }
@@ -135,8 +141,8 @@
             left: 0;
             background-color: $white;
             z-index: 10;
-            padding-left: 1rem;
-            padding-top: 1rem;
+            // padding-left: 1rem;
+            // padding-top: 1rem;
             border-top: 3px solid $bg-block;
             @include desktops {
                 top: calc(300% + 10px);
@@ -151,9 +157,9 @@
             li {
                 margin: 0;
                 a {
-                    padding: 1rem 0;
-                    font-size: 18px;
-                    line-height: 19px;
+                    padding: 1.5rem 0 1.5rem 1rem;
+                    font-size: 16px;
+                    line-height: 16px;
                     color: #000000;
                     @include mobile {
                         padding: 0.6rem 0;
@@ -161,6 +167,9 @@
                         line-height: 16px;
                         color: #000000;
                     }
+                }
+                a:hover {
+                    color: $bg-block;
                 }
             }
         }
@@ -173,7 +182,7 @@
             top: -20%;
             @include desktops {
                 height: 4.6rem;
-                top: -16%;
+                top: -15%;
             }
             @include tablet {
                 height: 3.8rem;

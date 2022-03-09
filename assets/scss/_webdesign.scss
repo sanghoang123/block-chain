@@ -78,6 +78,11 @@
             }
         }
     }
+    &__item:hover {
+        cursor: pointer;
+        opacity: 0.8;
+        transition: opacity 0.2s linear;
+    }
 }
 .procedure.procedure__pc {
     background-image: url(../img/blockchain-step-1.png);

@@ -7,7 +7,7 @@
     background-position: center;
     background-color: #001d25;
     @include tablet {
-        background-size: 160%;
+        background-size: cover;
         padding-top: -200%;
         background-position: top center;
     }
@@ -236,6 +236,9 @@
 
     &__svg {
         text-align: right;
+        @include tablet {
+            visibility: hidden;
+        }
     }
 
     &__block {
@@ -250,6 +253,11 @@
             display: flex;
             align-items: center;
         }
+    }
+    &__block:hover {
+        cursor: pointer;
+        border: 1px solid $white;
+        background: linear-gradient(90deg, #003646 0%, rgba(0, 54, 70, 0.2) 100%);
     }
     &__photo {
         min-width: 80px;
@@ -307,6 +315,7 @@
             }
         }
         &__item {
+            z-index: 1;
             width: 100%;
             flex: 0 calc(50% - 6rem);
             padding: 3rem;
@@ -320,6 +329,12 @@
             @include mobile {
                 flex: 0 100%;
             }
+        }
+        &__item:hover {
+            cursor: pointer;
+            border: 1px solid $white;
+            transform: scale(1.05);
+            box-shadow: 0px 0px 6px 6px rgb(255 255 255 / 15%);
         }
 
         &__head {

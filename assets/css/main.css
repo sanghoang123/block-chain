@@ -32,6 +32,11 @@ section {
   text-decoration: none;
 }
 
+.btn:hover {
+  color: #fff;
+  background-color: #000;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -179,6 +184,9 @@ img {
     font-size: 1.8rem;
   }
 }
+.header__search-icon:hover {
+  color: #02A4AE;
+}
 
 .navbar {
   display: flex;
@@ -223,6 +231,9 @@ img {
     font-size: 1rem;
   }
 }
+.navbar li a:hover {
+  color: #02A4AE;
+}
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   .navbar li {
     margin-left: 5rem;
@@ -251,8 +262,6 @@ img {
   left: 0;
   background-color: #fff;
   z-index: 10;
-  padding-left: 1rem;
-  padding-top: 1rem;
   border-top: 3px solid #02A4AE;
 }
 @media (min-width: 1200px) and (max-width: 1399.98px) {
@@ -275,9 +284,9 @@ img {
   margin: 0;
 }
 .navbar li .navbar-list li a {
-  padding: 1rem 0;
-  font-size: 18px;
-  line-height: 19px;
+  padding: 1.5rem 0 1.5rem 1rem;
+  font-size: 16px;
+  line-height: 16px;
   color: #000000;
 }
 @media screen and (max-width: 767.98px) {
@@ -287,6 +296,9 @@ img {
     line-height: 16px;
     color: #000000;
   }
+}
+.navbar li .navbar-list li a:hover {
+  color: #02A4AE;
 }
 .navbar li .navbar-list::before {
   content: "";
@@ -299,7 +311,7 @@ img {
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   .navbar li .navbar-list::before {
     height: 4.6rem;
-    top: -16%;
+    top: -15%;
   }
 }
 @media screen and (max-width: 1199.98px) {
@@ -433,7 +445,6 @@ img {
 }
 
 .intro {
-  margin: 6rem 0 0 0;
   padding-bottom: 10rem;
 }
 @media (min-width: 1200px) and (max-width: 1399.98px) {
@@ -451,21 +462,16 @@ img {
   align-content: center;
   justify-items: flex-start;
   flex-direction: row;
-  margin-bottom: 10rem;
-}
-@media (min-width: 1200px) and (max-width: 1399.98px) {
-  .intro__contain {
-    padding-top: 6rem;
-  }
+  padding-top: 6rem;
 }
 @media (max-width: 575.98px) {
   .intro__contain {
     flex-direction: column;
-    margin-bottom: 6rem;
+    padding-top: 4rem;
   }
 }
 .intro__contain + .intro__contain {
-  margin-bottom: 0;
+  padding-top: 6rem;
 }
 .intro__heading {
   flex-basis: 35%;
@@ -525,6 +531,11 @@ img {
 .slider {
   margin-bottom: 10rem;
 }
+@media screen and (max-width: 1199.98px) {
+  .slider {
+    margin-bottom: 0;
+  }
+}
 .slider__item {
   flex-basis: 30%;
   padding: 0 2rem;
@@ -533,26 +544,73 @@ img {
   display: flex;
   flex-direction: column;
   padding: 5rem;
-  border-left: 1px solid #42e8e0;
+  border: 1px solid #42e8e0;
+  border-radius: 2rem;
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .slider__item .image {
+    padding: 4rem;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .slider__item .image {
+    padding: 4rem;
+  }
 }
 @media screen and (max-width: 767.98px) {
   .slider__item .image {
     padding: 3rem;
   }
 }
+.slider__item .image:hover {
+  cursor: pointer;
+  border-color: #fff;
+  box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s linear;
+  background: linear-gradient(90deg, #003646 0%, rgba(0, 54, 70, 0.2) 100%);
+}
+.slider__item .image:hover .slider__number {
+  color: #02A4AE;
+}
+.slider__item .image:hover .slider__number::before {
+  border-bottom: 3px solid #fff;
+}
+.slider__item .image:hover .slider__image > img {
+  transform: scale(1.2);
+}
+.slider__item .image:hover .slider__title {
+  color: #02A4AE;
+}
+.slider__item .image:hover .slider__btn {
+  border-color: #fff;
+}
 .slider__item .image.aboutus__image--border {
   border: 15px solid #173e4a;
+}
+.slider__item .image:hover .slider__desc {
+  color: #02A4AE;
 }
 .slider__image {
   padding: 5rem 0;
   display: flex;
   justify-content: center;
 }
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .slider__image {
+    padding: 4rem 0;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .slider__image {
+    padding: 4rem;
+  }
+}
 .slider__image.slider__image--algin-start.slider__image--small {
   justify-content: space-between;
 }
 .slider__image.slider__image--algin-start.slider__image--small img {
   width: 10rem;
+  object-fit: contain;
 }
 @media screen and (max-width: 767.98px) {
   .slider__image.slider__image--algin-start.slider__image--small img {
@@ -571,10 +629,15 @@ img {
   text-align: center;
   margin: 80px 0px;
 }
-@media screen and (max-width: 767.98px) {
+@media (min-width: 1200px) and (max-width: 1399.98px) {
   .slider__title {
-    margin-bottom: 3rem;
-    margin-top: 6rem;
+    margin: 4rem 0;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .slider__title {
+    padding: 0;
+    margin: 0;
   }
 }
 .slider__title.slider__title--center {
@@ -600,6 +663,16 @@ img {
   text-align: center;
   border: 1px solid #42e8e0;
   border-radius: 6px;
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .slider__btn {
+    margin-top: 4rem;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .slider__btn {
+    margin-top: 4rem;
+  }
 }
 .slider__btn:hover {
   background-color: #42E8E0;
@@ -776,7 +849,7 @@ img {
 }
 @media (max-width: 575.98px) {
   .chooseus {
-    padding: 6rem 0;
+    padding: 3rem 0;
   }
 }
 .chooseus__banner {
@@ -912,7 +985,7 @@ img {
 }
 @media (max-width: 575.98px) {
   .chooseus__desc-block-info .info-icon {
-    padding-bottom: 4rem;
+    padding-bottom: 0;
   }
 }
 .chooseus__desc-block-info .info-block {
@@ -936,6 +1009,18 @@ img {
 .chooseus__desc-block-info .info-block-icon {
   font-size: 3rem;
   font-weight: 600;
+  width: 50%;
+}
+.chooseus__desc-block-info:hover {
+  background-color: #fff;
+  transition: all 0.3s ease-in;
+}
+.chooseus__desc-block-info:hover .info-icon {
+  color: #02A4AE;
+  border-bottom: 1px solid #02A4AE;
+}
+.chooseus__desc-block-info:hover .info-block {
+  color: #02A4AE;
 }
 .chooseus__desc-block-info--img {
   background-color: unset;
@@ -1047,7 +1132,7 @@ img {
 }
 @media screen and (max-width: 767.98px) {
   .feature-block {
-    padding: 6rem 0 0;
+    padding: 3rem 0 0;
   }
 }
 .feature-block .feature__title {
@@ -1156,6 +1241,7 @@ img {
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
+  opacity: 0.8;
 }
 .feature-block .feature-slider .feature img.feature__img--no-width {
   width: unset;
@@ -1191,6 +1277,15 @@ img {
   .feature-block .feature-slider .feature__btn {
     font-size: 1rem;
   }
+}
+.feature-block .feature-slider .feature:hover .feature__info {
+  background-color: #fff;
+}
+.feature-block .feature-slider .feature:hover .feature__info .feature__head {
+  color: #02A4AE;
+}
+.feature-block .feature-slider .feature:hover img {
+  opacity: 1;
 }
 
 .assessment-block {
@@ -1369,6 +1464,9 @@ img {
     font-size: 1rem;
   }
 }
+.assessment-block .assessment-slider .assessment:hover .assessment__img-contain:hover {
+  background: linear-gradient(180deg, #003646 0%, rgba(0, 54, 70, 0.2) 100%);
+}
 .assessment-block .assessment-slider .assessment.assessment--bg-smart-contract {
   background: linear-gradient(180deg, #00c1c1 0%, rgba(23, 49, 57, 0) 100%);
   backdrop-filter: blur(35.3483px);
@@ -1523,7 +1621,7 @@ img {
 }
 @media (max-width: 575.98px) {
   .slick-dots {
-    bottom: 2%;
+    bottom: 0;
   }
 }
 
@@ -1908,6 +2006,11 @@ footer {
   background: #002631;
   padding-bottom: 12rem;
 }
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .about__content {
+    padding-bottom: 10rem;
+  }
+}
 @media screen and (max-width: 767.98px) {
   .about__content {
     padding-bottom: 3rem;
@@ -2270,6 +2373,11 @@ footer {
     line-height: 10px;
   }
 }
+.procedure__item:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s linear;
+}
 
 .procedure.procedure__pc {
   background-image: url(../img/blockchain-step-1.png);
@@ -2469,6 +2577,10 @@ footer {
     flex-basis: 45%;
   }
 }
+.marketing-service__item:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
 .marketing-service__title {
   font-weight: 600;
   font-size: 32px;
@@ -2524,6 +2636,7 @@ footer {
   border-radius: 25px;
   padding: 6rem;
   flex-basis: calc(25% - 4rem);
+  z-index: 1;
 }
 @media screen and (max-width: 1199.98px) {
   .marketing-system__item {
@@ -2537,6 +2650,11 @@ footer {
     align-items: center;
     justify-content: center;
   }
+}
+.marketing-system__item:hover {
+  border: 1px solid #fff;
+  cursor: pointer;
+  background: linear-gradient(90deg, #003646 0%, rgba(0, 54, 70, 0.2) 100%);
 }
 .marketing-system__photo {
   width: 10rem;
@@ -2578,7 +2696,7 @@ footer {
 }
 @media screen and (max-width: 1199.98px) {
   .ethereum-contract {
-    background-size: 160%;
+    background-size: cover;
     padding-top: -200%;
     background-position: top center;
   }
@@ -2826,6 +2944,11 @@ footer {
 .ethereum-contract__svg {
   text-align: right;
 }
+@media screen and (max-width: 1199.98px) {
+  .ethereum-contract__svg {
+    visibility: hidden;
+  }
+}
 .ethereum-contract__block {
   width: 480px;
   padding: 3rem;
@@ -2838,6 +2961,11 @@ footer {
 .ethereum-contract__block-head {
   display: flex;
   align-items: center;
+}
+.ethereum-contract__block:hover {
+  cursor: pointer;
+  border: 1px solid #fff;
+  background: linear-gradient(90deg, #003646 0%, rgba(0, 54, 70, 0.2) 100%);
 }
 .ethereum-contract__photo {
   min-width: 80px;
@@ -2905,6 +3033,7 @@ footer {
   }
 }
 .smart-contract-block .smart-contract__item {
+  z-index: 1;
   width: 100%;
   flex: 0 calc(50% - 6rem);
   padding: 3rem;
@@ -2922,6 +3051,12 @@ footer {
   .smart-contract-block .smart-contract__item {
     flex: 0 100%;
   }
+}
+.smart-contract-block .smart-contract__item:hover {
+  cursor: pointer;
+  border: 1px solid #fff;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 6px 6px rgba(255, 255, 255, 0.15);
 }
 .smart-contract-block .smart-contract__head {
   display: flex;
@@ -2967,6 +3102,11 @@ footer {
 .cryptocurrency-content .cryptocurrency-solutions__content {
   position: relative;
   padding-bottom: 16rem;
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .cryptocurrency-content .cryptocurrency-solutions__content {
+    padding-bottom: 10rem;
+  }
 }
 @media screen and (max-width: 767.98px) {
   .cryptocurrency-content .cryptocurrency-solutions__content {
@@ -3036,6 +3176,11 @@ footer {
   background-repeat: no-repeat;
   background-position: right;
 }
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .cryptocurrency-content .cryptocurrency-solutions__content::before {
+    background-size: 70%;
+  }
+}
 @media screen and (max-width: 767.98px) {
   .cryptocurrency-content .cryptocurrency-solutions__content::before {
     top: -42%;
@@ -3046,6 +3191,11 @@ footer {
 }
 .cryptocurrency-content .cryptocurrency__content {
   padding-bottom: 16rem;
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .cryptocurrency-content .cryptocurrency__content {
+    padding-bottom: 10rem;
+  }
 }
 @media screen and (max-width: 767.98px) {
   .cryptocurrency-content .cryptocurrency__content {
@@ -3068,6 +3218,11 @@ footer {
   font-size: 42px;
   line-height: 44px;
   padding-bottom: 10rem;
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .cryptocurrency-content .cryptocurrency__content .cryptocurrency__title {
+    padding-bottom: 7rem;
+  }
 }
 @media screen and (max-width: 767.98px) {
   .cryptocurrency-content .cryptocurrency__content .cryptocurrency__title {
@@ -3105,8 +3260,21 @@ footer {
     font-size: 12px;
   }
 }
+.cryptocurrency-content .cryptocurrency__content .cryptocurrency:hover {
+  border-color: #fff;
+  cursor: pointer;
+  background: #fff;
+}
+.cryptocurrency-content .cryptocurrency__content .cryptocurrency:hover .cryptocurrency__text {
+  color: #000;
+}
 .cryptocurrency-content .process-crypto {
   padding-bottom: 16rem;
+}
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .cryptocurrency-content .process-crypto {
+    padding-bottom: 10rem;
+  }
 }
 @media screen and (max-width: 1199.98px) {
   .cryptocurrency-content .process-crypto {
@@ -3207,6 +3375,14 @@ footer {
     font-size: 16px;
     line-height: 17px;
   }
+}
+.cryptocurrency-content .process-crypto__item:hover {
+  border-color: #fff;
+  background: #fff;
+  cursor: pointer;
+}
+.cryptocurrency-content .process-crypto__item:hover .process-crypto__item-heading, .cryptocurrency-content .process-crypto__item:hover .process-crypto__item-desc {
+  color: #000;
 }
 
 /*# sourceMappingURL=main.css.map */
