@@ -444,6 +444,10 @@ img {
   background-image: url(../img/marketing-guide-banner.jpg);
 }
 
+.banner.banner__development--bg {
+  background-image: url(../img/bg_hero.png);
+}
+
 .intro {
   padding-bottom: 10rem;
 }
@@ -3587,7 +3591,6 @@ footer {
   margin-bottom: 10rem;
 }
 .services__how-text-heading {
-  font-family: SVN-Poppins;
   font-size: 42px;
   font-style: normal;
   font-weight: 600;
@@ -3597,7 +3600,6 @@ footer {
   max-width: 385px;
 }
 .services__how-text-subheading {
-  font-family: SVN-Poppins;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -3642,7 +3644,6 @@ footer {
 .services__how-lists-item .services-item-left-subheading {
   margin-right: 6.6rem;
   max-width: 395px;
-  font-family: SVN-Poppins;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -3651,7 +3652,6 @@ footer {
   text-align: left;
 }
 .services__how-lists-item .services-item-left-heading {
-  font-family: SVN-Poppins;
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
@@ -3666,6 +3666,13 @@ footer {
 .services__how-lists-item .services-item-right img {
   max-width: 12px;
   max-height: 12px;
+}
+.services__how-lists-item:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+.services__how-lists-item:hover .services-item-left-heading, .services__how-lists-item:hover .services-item-left-subheading {
+  color: #000;
 }
 .services__how-image {
   margin-bottom: 16rem;
@@ -3682,7 +3689,6 @@ footer {
   gap: 0 95px;
 }
 .services__how-technology .technology-heading {
-  font-family: SVN-Poppins;
   font-size: 42px;
   font-style: normal;
   font-weight: 600;
@@ -3692,7 +3698,6 @@ footer {
   max-width: 385px;
 }
 .services__how-technology .technology-subheading {
-  font-family: SVN-Poppins;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -3728,7 +3733,6 @@ footer {
   align-items: flex-start;
 }
 .services__how-technology .technology__element .technology-text {
-  font-family: SVN-Poppins;
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
@@ -3750,7 +3754,6 @@ footer {
     margin-bottom: 10rem;
   }
   .services__how-text-heading {
-    font-family: SVN-Poppins;
     font-size: 42px;
     font-style: normal;
     font-weight: 600;
@@ -3760,7 +3763,6 @@ footer {
     max-width: 385px;
   }
   .services__how-text-subheading {
-    font-family: SVN-Poppins;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -3806,7 +3808,6 @@ footer {
   .services__how-lists-item .services-item-left-subheading {
     margin-right: 6.6rem;
     max-width: 395px;
-    font-family: SVN-Poppins;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -3815,7 +3816,6 @@ footer {
     text-align: left;
   }
   .services__how-lists-item .services-item-left-heading {
-    font-family: SVN-Poppins;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -3842,7 +3842,6 @@ footer {
     gap: 0 95px;
   }
   .services__how-technology .technology-heading {
-    font-family: SVN-Poppins;
     font-size: 42px;
     font-style: normal;
     font-weight: 600;
@@ -3852,7 +3851,6 @@ footer {
     max-width: 385px;
   }
   .services__how-technology .technology-subheading {
-    font-family: SVN-Poppins;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -3888,7 +3886,6 @@ footer {
     align-items: flex-start;
   }
   .services__how-technology .technology__element .technology-text {
-    font-family: SVN-Poppins;
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
@@ -3898,6 +3895,10 @@ footer {
     display: inline-block;
     padding: 6rem;
     background: linear-gradient(90deg, #00c1c1 4.56%, rgba(0, 193, 193, 0.2) 100%);
+  }
+  .services__how-technology .technology__element .technology-text:hover {
+    cursor: pointer;
+    border: 1px solid #fff;
   }
 }
 @media (max-width: 575.98px) {
@@ -3911,7 +3912,6 @@ footer {
     margin-bottom: 3rem;
   }
   .services__how-text-heading {
-    font-family: SVN-Poppins;
     font-size: 28px;
     font-style: normal;
     font-weight: 600;
@@ -3921,7 +3921,6 @@ footer {
     max-width: 385px;
   }
   .services__how-text-subheading {
-    font-family: SVN-Poppins;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -3976,7 +3975,6 @@ footer {
   .services__how-lists-item .services-item-left-subheading {
     margin-right: 6.6rem;
     max-width: 395px;
-    font-family: SVN-Poppins;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -3985,7 +3983,6 @@ footer {
     text-align: left;
   }
   .services__how-lists-item .services-item-left-heading {
-    font-family: SVN-Poppins;
     font-size: 22px;
     font-style: normal;
     font-weight: 600;
@@ -4012,7 +4009,6 @@ footer {
     gap: 0 95px;
   }
   .services__how-technology .technology-heading {
-    font-family: SVN-Poppins;
     font-size: 28px;
     font-style: normal;
     font-weight: 600;
@@ -4023,7 +4019,6 @@ footer {
     margin-bottom: 16px;
   }
   .services__how-technology .technology-subheading {
-    font-family: SVN-Poppins;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -4062,7 +4057,6 @@ footer {
   .services__how-technology .technology__element .technology-text {
     display: flex;
     align-items: center;
-    font-family: SVN-Poppins;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -4085,7 +4079,6 @@ footer {
     margin-bottom: 3rem;
   }
   .services__how-text-heading {
-    font-family: SVN-Poppins;
     font-size: 28px;
     font-style: normal;
     font-weight: 600;
@@ -4095,7 +4088,6 @@ footer {
     max-width: 385px;
   }
   .services__how-text-subheading {
-    font-family: SVN-Poppins;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -4150,7 +4142,6 @@ footer {
   .services__how-lists-item .services-item-left-subheading {
     margin-right: 6.6rem;
     max-width: 395px;
-    font-family: SVN-Poppins;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -4159,7 +4150,6 @@ footer {
     text-align: left;
   }
   .services__how-lists-item .services-item-left-heading {
-    font-family: SVN-Poppins;
     font-size: 22px;
     font-style: normal;
     font-weight: 600;
@@ -4186,7 +4176,6 @@ footer {
     gap: 0 95px;
   }
   .services__how-technology .technology-heading {
-    font-family: SVN-Poppins;
     font-size: 28px;
     font-style: normal;
     font-weight: 600;
@@ -4197,7 +4186,6 @@ footer {
     margin-bottom: 16px;
   }
   .services__how-technology .technology-subheading {
-    font-family: SVN-Poppins;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -4236,7 +4224,6 @@ footer {
   .services__how-technology .technology__element .technology-text {
     display: flex;
     align-items: center;
-    font-family: SVN-Poppins;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -4252,7 +4239,6 @@ footer {
   margin-bottom: 10rem;
 }
 .package__heading {
-  font-family: SVN-Poppins;
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
@@ -4274,7 +4260,6 @@ footer {
   border-bottom: 3px solid #fff;
 }
 .package__content-top-item .item-heading {
-  font-family: SVN-Poppins;
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
@@ -4302,7 +4287,6 @@ footer {
   list-style: outside;
 }
 .package__content-bottom .bottom-list ul li {
-  font-family: SVN-Poppins;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -4316,7 +4300,6 @@ footer {
     margin-bottom: 6rem;
   }
   .package__heading {
-    font-family: SVN-Poppins;
     font-size: 28px;
     font-style: normal;
     font-weight: 600;
@@ -4344,7 +4327,6 @@ footer {
     margin-bottom: 16px;
   }
   .package__content-top-item .item-heading {
-    font-family: SVN-Poppins;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -4373,7 +4355,6 @@ footer {
     list-style: outside;
   }
   .package__content-bottom .bottom-list ul li {
-    font-family: SVN-Poppins;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -4387,7 +4368,6 @@ footer {
     margin-bottom: 6rem;
   }
   .package__heading {
-    font-family: SVN-Poppins;
     font-size: 28px;
     font-style: normal;
     font-weight: 600;
@@ -4415,7 +4395,6 @@ footer {
     margin-bottom: 16px;
   }
   .package__content-top-item .item-heading {
-    font-family: SVN-Poppins;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -4444,7 +4423,6 @@ footer {
     list-style: outside;
   }
   .package__content-bottom .bottom-list ul li {
-    font-family: SVN-Poppins;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
