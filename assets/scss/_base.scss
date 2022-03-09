@@ -1,37 +1,41 @@
+@font-face {
+  font-family: "SVN-Poppins";
+  src: url(../../SVN_Poppins/PoppinsVN-500.ttf);
+}
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 body {
-    margin: 0 auto;
-    font-family: "Poppins", sans-serif;
-    color: $white;
+  margin: 0 auto;
+  font-family: "SVN-Poppins", sans-serif;
+  color: $white;
 }
 
 section {
-    background-color: $bg-color;
+  background-color: $bg-color;
 }
 .btn {
-    display: inline-block;
-    color: $white;
-    text-decoration: none;
+  display: inline-block;
+  color: $white;
+  text-decoration: none;
 }
 .btn:hover {
-    color: $white;
-    background-color: $black;
+  color: $white;
+  background-color: $black;
 }
 img {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-    outline: none;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  outline: none;
 }
 .btn--bg {
-    cursor: pointer;
-    padding: 16px 24px;
-    border-radius: 4px;
-    color: #fff;
-    background-color: #42e8e0;
-    @include tablet {
-        padding: 10px 10px;
-    }
+  cursor: pointer;
+  padding: 16px 24px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #42e8e0;
+  @include tablet {
+    padding: 10px 10px;
+  }
 }
