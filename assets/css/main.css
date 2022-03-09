@@ -2200,7 +2200,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 4rem calc(10% / 3);
+  gap: 4rem 3.3333333333%;
   margin-left: -calc(10%/6);
   margin-right: -calc(10%/6);
 }
@@ -2217,7 +2217,7 @@ footer {
 }
 @media screen and (max-width: 1199.98px) {
   .news__item {
-    flex-basis: calc(45%);
+    flex-basis: 45%;
   }
 }
 @media screen and (max-width: 767.98px) {
@@ -3419,6 +3419,47 @@ footer {
   height: 124px;
 }
 
+.item-left.left-mkt {
+  padding: 0;
+}
+
+.item-left img.mkt-guide {
+  height: 100%;
+  width: 100%;
+}
+
+.item-right.right-mkt {
+  padding: 6rem;
+}
+.item-right.right-mkt h4 {
+  font-family: SVN-Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.item-right.right-mkt p {
+  font-family: SVN-Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.item-right.right-mkt ul {
+  list-style: circle;
+  font-family: SVN-Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
 .item-right {
   padding: 100px;
   background: linear-gradient(90deg, #003646 0%, rgba(0, 54, 70, 0.2) 100%);
@@ -3471,6 +3512,47 @@ footer {
   }
 }
 @media (max-width: 575.98px) {
+  .slide-item.mkt {
+    flex-direction: column;
+  }
+
+  .item-left.left-mkt {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .item-right.right-mkt {
+    padding: 3rem;
+  }
+  .item-right.right-mkt h4 {
+    font-family: SVN-Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  .item-right.right-mkt p {
+    font-family: SVN-Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  .item-right.right-mkt ul {
+    list-style: circle;
+    font-family: SVN-Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
   .swiper {
     width: 100%;
   }
@@ -3798,7 +3880,7 @@ footer {
     padding: 3rem;
     background-color: #001b23;
     border-radius: 10px;
-    flex-basis: calc(100% / 2 - 60px);
+    flex-basis: calc(50% - 60px);
   }
   .services__how-lists-item .services-item-left {
     display: flex;
