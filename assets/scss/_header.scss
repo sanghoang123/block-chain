@@ -1,204 +1,204 @@
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 0;
+  @include desktops {
+    padding: 2.5rem 0;
+  }
+  @include tablet {
+    padding: 2.4rem 0;
+  }
+  @include phone {
+    padding: 1.4rem 0;
+  }
+  &__nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5rem 0;
-    @include desktops {
-        padding: 2.5rem 0;
+    &-logo-m {
+      display: none;
     }
-    @include tablet {
-        padding: 2.4rem 0;
-    }
-    @include phone {
-        padding: 1.4rem 0;
-    }
-    &__nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        &-logo-m {
-            display: none;
-        }
-        &-logo {
-            margin-right: 6rem;
-            @include desktops {
-                margin-right: 5rem;
-            }
-            @include tablet {
-                margin-right: 2rem;
-            }
-            @include phone {
-                margin-right: 1rem;
-            }
+    &-logo {
+      margin-right: 6rem;
+      @include desktops {
+        margin-right: 5rem;
+      }
+      @include tablet {
+        margin-right: 2rem;
+      }
+      @include phone {
+        margin-right: 1rem;
+      }
 
-            img {
-                height: 7rem;
-                @include desktops {
-                    height: 6rem;
-                }
-                @include ipad {
-                    height: 5rem;
-                }
-                @include phone-l {
-                    height: 5rem;
-                }
-                @include phone {
-                    height: 3rem;
-                }
-            }
-            .nav-logo__pc {
-                @include tablet {
-                    display: none;
-                }
-            }
-            img.nav-logo__small {
-                display: none;
-                @include desktops {
-                    display: none;
-                }
-                @include tablet {
-                    display: block;
-                }
-            }
-        }
-        &-icon {
-            display: none;
-            color: $black;
-            font-size: 2.4rem;
-            font-weight: 600;
-            flex: 1;
-        }
-    }
-
-    &__search {
-        &-icon {
-            color: $black;
-            font-size: 2.4rem;
-            font-weight: 600;
-            @include mobile {
-                font-size: 1.8rem;
-            }
-        }
-        &-icon:hover {
-            color: $bg-block;
-        }
-    }
-}
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    li {
-        margin-left: 6rem;
-        position: relative;
-        a {
-            font-size: 2.2rem;
-            font-weight: 500;
-            line-height: 23.1px;
-            color: $black;
-            display: flex;
-            align-items: center;
-            ion-icon {
-                padding-left: 6px;
-            }
-            @include desktops {
-                font-size: 1.6rem;
-                line-height: 1.6rem;
-            }
-            @include ipad {
-                font-size: 1.6rem;
-                line-height: 1.6rem;
-            }
-            @include mobile {
-                font-size: 1.2rem;
-                line-height: 1.2rem;
-            }
-            @include phone {
-                font-size: 1rem;
-            }
-        }
-        a:hover {
-            color: $bg-block;
-        }
+      img {
+        height: 7rem;
         @include desktops {
-            margin-left: 5rem;
+          height: 6rem;
         }
         @include ipad {
-            margin-left: 3rem;
+          height: 5rem;
         }
         @include phone-l {
-            margin-left: 4rem;
+          height: 5rem;
         }
         @include phone {
-            margin-left: 1.3rem;
+          height: 3rem;
         }
+      }
+      .nav-logo__pc {
+        @include tablet {
+          display: none;
+        }
+      }
+      img.nav-logo__small {
+        display: none;
+        @include desktops {
+          display: none;
+        }
+        @include tablet {
+          display: block;
+        }
+      }
+    }
+    &-icon {
+      display: none;
+      color: $black;
+      font-size: 2.4rem;
+      font-weight: 600;
+      flex: 1;
+    }
+  }
 
-        .navbar-list {
-            display: none;
-            width: 296px;
-            position: absolute;
-            top: calc(300% + 15px);
-            left: 0;
-            background-color: $white;
-            z-index: 10;
-            // padding-left: 1rem;
-            // padding-top: 1rem;
-            border-top: 3px solid $bg-block;
-            @include desktops {
-                top: calc(300% + 10px);
-            }
-            @include tablet {
-                top: calc(300% + 9px);
-            }
-            @include mobile {
-                top: calc(300% - 1px);
-                width: 200px;
-            }
-            li {
-                margin: 0;
-                a {
-                    padding: 1.5rem 0 1.5rem 1rem;
-                    font-size: 16px;
-                    line-height: 16px;
-                    color: #000000;
-                    @include mobile {
-                        padding: 0.6rem 0;
-                        font-size: 12px;
-                        line-height: 16px;
-                        color: #000000;
-                    }
-                }
-                a:hover {
-                    color: $bg-block;
-                }
-            }
-        }
-        .navbar-list::before {
-            content: "";
-            position: absolute;
-            height: 5.5rem;
-            left: 0;
-            right: 0;
-            top: -20%;
-            @include desktops {
-                height: 4.6rem;
-                top: -15%;
-            }
-            @include tablet {
-                height: 3.8rem;
-                top: -13%;
-            }
-            @include mobile {
-                height: 3.2rem;
-                top: -16%;
-            }
-        }
+  &__search {
+    &-icon {
+      color: $black;
+      font-size: 2.4rem;
+      font-weight: 600;
+      @include mobile {
+        font-size: 1.8rem;
+      }
+    }
+    &-icon:hover {
+      color: $bg-block;
+    }
+  }
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  li {
+    margin-left: 6rem;
+    position: relative;
+    a {
+      font-size: 2.2rem;
+      font-weight: 500;
+      line-height: 23.1px;
+      color: $black;
+      display: flex;
+      align-items: center;
+      ion-icon {
+        padding-left: 6px;
+      }
+      @include desktops {
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+      }
+      @include ipad {
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+      }
+      @include mobile {
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+      }
+      @include phone {
+        font-size: 1rem;
+      }
+    }
+    a:hover {
+      color: $bg-block;
+    }
+    @include desktops {
+      margin-left: 5rem;
+    }
+    @include ipad {
+      margin-left: 3rem;
+    }
+    @include phone-l {
+      margin-left: 4rem;
+    }
+    @include phone {
+      margin-left: 1.3rem;
     }
 
-    li.navbar__item-hover:hover .navbar-list {
-        display: block;
+    .navbar-list {
+      display: none;
+      width: 296px;
+      position: absolute;
+      top: calc(300% + 15px);
+      left: 0;
+      background-color: $white;
+      z-index: 10;
+      // padding-left: 1rem;
+      // padding-top: 1rem;
+      border-top: 3px solid $bg-block;
+      @include desktops {
+        top: calc(300% + 10px);
+      }
+      @include tablet {
+        top: calc(300% + 9px);
+      }
+      @include mobile {
+        top: calc(300% - 1px);
+        width: 200px;
+      }
+      li {
+        margin: 0;
+        a {
+          padding: 1.5rem 0 1.5rem 1rem;
+          font-size: 16px;
+          line-height: 16px;
+          color: #000000;
+          @include mobile {
+            padding: 0.6rem 0;
+            font-size: 12px;
+            line-height: 16px;
+            color: #000000;
+          }
+        }
+        a:hover {
+          color: $bg-block;
+        }
+      }
     }
+    .navbar-list::before {
+      content: "";
+      position: absolute;
+      height: 5.5rem;
+      left: 0;
+      right: 0;
+      top: -20%;
+      @include desktops {
+        height: 4.6rem;
+        top: -15%;
+      }
+      @include tablet {
+        height: 3.8rem;
+        top: -13%;
+      }
+      @include mobile {
+        height: 3.2rem;
+        top: -16%;
+      }
+    }
+  }
+
+  li.navbar__item-hover:hover .navbar-list {
+    display: block;
+  }
 }
 .navbar-active {
-    display: flex !important;
+  display: flex !important;
 }
