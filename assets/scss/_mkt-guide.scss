@@ -13,7 +13,6 @@ header {
   gap: 0 7rem;
   margin-bottom: 17rem;
   .heading-ico {
-    font-family: SVN-Poppins;
     font-size: 48px;
     font-style: normal;
     font-weight: 600;
@@ -23,7 +22,6 @@ header {
     min-width: 400px;
   }
   .subheading-ico {
-    font-family: SVN-Poppins;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -36,7 +34,6 @@ header {
   &__heading {
     margin-bottom: 10rem;
     .heading {
-      font-family: SVN-Poppins;
       font-size: 48px;
       font-style: normal;
       font-weight: 600;
@@ -61,7 +58,6 @@ header {
         &-text {
           margin-left: 4rem;
           .heading {
-            font-family: SVN-Poppins;
             font-size: 32px;
             font-style: normal;
             font-weight: 600;
@@ -71,7 +67,6 @@ header {
             margin-bottom: 1.6rem;
           }
           .subheading {
-            font-family: SVN-Poppins;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -91,7 +86,6 @@ header {
   margin-bottom: 10rem;
   &-item {
     .item-number {
-      font-family: SVN-Poppins;
       font-size: 26px;
       font-style: normal;
       font-weight: 600;
@@ -101,7 +95,6 @@ header {
       color: $btn-color;
     }
     .item-heading {
-      font-family: SVN-Poppins;
       font-size: 32px;
       font-style: normal;
       font-weight: 600;
@@ -124,7 +117,6 @@ header {
   &-heading {
     margin-bottom: 6rem;
     .heading {
-      font-family: SVN-Poppins;
       font-size: 48px;
       font-style: normal;
       font-weight: 600;
@@ -159,7 +151,6 @@ header {
     }
     .item-text {
       .text-heading {
-        font-family: SVN-Poppins;
         font-size: 32px;
         font-style: normal;
         font-weight: 600;
@@ -170,7 +161,6 @@ header {
         max-width: 277px;
       }
       .text-sub {
-        font-family: SVN-Poppins;
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
@@ -188,7 +178,6 @@ header {
     gap: 0 0;
     margin-bottom: 6rem;
     .heading-ico {
-      font-family: SVN-Poppins;
       font-size: 28px;
       font-style: normal;
       font-weight: 600;
@@ -198,7 +187,6 @@ header {
       margin-bottom: 16px;
     }
     .subheading-ico {
-      font-family: SVN-Poppins;
       font-size: 12px;
       font-style: normal;
       font-weight: 400;
@@ -212,7 +200,6 @@ header {
     &__heading {
       margin-bottom: 9rem;
       .heading {
-        font-family: SVN-Poppins;
         font-size: 28px;
         font-style: normal;
         font-weight: 600;
@@ -243,7 +230,6 @@ header {
             margin-top: 3rem;
             margin-bottom: 2rem;
             .heading {
-              font-family: SVN-Poppins;
               font-size: 32px;
               font-style: normal;
               font-weight: 600;
@@ -253,7 +239,6 @@ header {
               margin-bottom: 1.6rem;
             }
             .subheading {
-              font-family: SVN-Poppins;
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
@@ -273,7 +258,6 @@ header {
     overflow-x: scroll;
     &-item {
       .item-number {
-        font-family: SVN-Poppins;
         font-size: 26px;
         font-style: normal;
         font-weight: 600;
@@ -283,7 +267,6 @@ header {
         color: $btn-color;
       }
       .item-heading {
-        font-family: SVN-Poppins;
         font-size: 32px;
         font-style: normal;
         font-weight: 600;
@@ -306,7 +289,6 @@ header {
     &-heading {
       margin-bottom: 6rem;
       .heading {
-        font-family: SVN-Poppins;
         font-size: 28px;
         font-style: normal;
         font-weight: 600;
@@ -343,7 +325,6 @@ header {
       }
       .item-text {
         .text-heading {
-          font-family: SVN-Poppins;
           font-size: 22px;
           font-style: normal;
           font-weight: 600;
@@ -352,7 +333,6 @@ header {
           text-align: left;
         }
         .text-sub {
-          font-family: SVN-Poppins;
           font-size: 12px;
           font-style: normal;
           font-weight: 400;
@@ -370,7 +350,6 @@ header {
     gap: 0 0;
     margin-bottom: 6rem;
     .heading-ico {
-      font-family: SVN-Poppins;
       font-size: 28px;
       font-style: normal;
       font-weight: 600;
@@ -380,7 +359,6 @@ header {
       margin-bottom: 16px;
     }
     .subheading-ico {
-      font-family: SVN-Poppins;
       font-size: 12px;
       font-style: normal;
       font-weight: 400;
@@ -394,7 +372,6 @@ header {
     &__heading {
       margin-bottom: 9rem;
       .heading {
-        font-family: SVN-Poppins;
         font-size: 28px;
         font-style: normal;
         font-weight: 600;
@@ -425,7 +402,6 @@ header {
             margin-top: 3rem;
             margin-bottom: 2rem;
             .heading {
-              font-family: SVN-Poppins;
               font-size: 32px;
               font-style: normal;
               font-weight: 600;
@@ -435,7 +411,6 @@ header {
               margin-bottom: 1.6rem;
             }
             .subheading {
-              font-family: SVN-Poppins;
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
@@ -455,7 +430,6 @@ header {
     overflow-x: scroll;
     &-item {
       .item-number {
-        font-family: SVN-Poppins;
         font-size: 26px;
         font-style: normal;
         font-weight: 600;
@@ -465,7 +439,6 @@ header {
         color: $btn-color;
       }
       .item-heading {
-        font-family: SVN-Poppins;
         font-size: 32px;
         font-style: normal;
         font-weight: 600;
@@ -488,7 +461,6 @@ header {
     &-heading {
       margin-bottom: 6rem;
       .heading {
-        font-family: SVN-Poppins;
         font-size: 28px;
         font-style: normal;
         font-weight: 600;
@@ -525,7 +497,6 @@ header {
       }
       .item-text {
         .text-heading {
-          font-family: SVN-Poppins;
           font-size: 22px;
           font-style: normal;
           font-weight: 600;
@@ -534,7 +505,6 @@ header {
           text-align: left;
         }
         .text-sub {
-          font-family: SVN-Poppins;
           font-size: 12px;
           font-style: normal;
           font-weight: 400;
