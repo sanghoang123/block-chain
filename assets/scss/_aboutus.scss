@@ -121,6 +121,9 @@
             padding-bottom: 3rem;
         }
         &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             padding: 6rem;
             border: 1.5rem solid #173e4a;
             height: 100%;

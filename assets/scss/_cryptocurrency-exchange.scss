@@ -132,13 +132,7 @@
             }
         }
         .cryptocurrency:hover {
-            border-color: $white;
             cursor: pointer;
-            background: $white;
-        }
-
-        .cryptocurrency:hover .cryptocurrency__text {
-            color: $black;
         }
     }
 
@@ -225,13 +219,7 @@
             }
         }
         &__item:hover {
-            border-color: $white;
-            background: $white;
             cursor: pointer;
-        }
-        &__item:hover .process-crypto__item-heading,
-        &__item:hover .process-crypto__item-desc {
-            color: $black;
         }
     }
 }

@@ -4,6 +4,47 @@
 //   navbar.classList.toggle('navbar-active');
 // });
 
+// declare variable
+const btnScrollToTop = document.querySelector('.footer-arrow');
+const headerNav = document.querySelector('.header__nav');
+const header_btnSearch = document.querySelector('.header__search');
+const headerForm = document.querySelector('.header__form');
+const header_btnTimes = document.querySelector('.header__times');
+
+arrowFooter = () => {
+  if (document.documentElement.scrollTop >= 1200) {
+    btnScrollToTop.classList.add('footer-arrow--active');
+  } else btnScrollToTop.classList.remove('footer-arrow--active');
+};
+
+// hide/show click search
+header_btnSearch.addEventListener('click', () => handleClickFormSearch());
+
+header_btnTimes.addEventListener('click', () => handleClickFormSearch());
+
+handleClickFormSearch = (hide = 'header__nav--hide') => {
+  const arrEle = [headerNav, header_btnSearch, headerForm, header_btnTimes];
+  arrEle.forEach((e) => {
+    e.classList.toggle(hide);
+  });
+};
+
+window.onscroll = () => {
+  arrowFooter();
+};
+
+btnScrollToTop.addEventListener('click', (e) => {
+  e.preventDefault();
+  topFunction();
+});
+
+// backtoTop
+topFunction = () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+};
+
+// slider
 $(document).ready(function () {
   $('.slider').slick({
     slidesToShow: 3,
@@ -13,9 +54,6 @@ $(document).ready(function () {
     draggable: false,
     prevArrow: `<button type='button' class='slick-prev slick-arrow'><ion-icon name="arrow-back-outline"></ion-icon></button>`,
     nextArrow: `<button type='button' class='slick-next slick-arrow'><ion-icon name="arrow-forward-outline"></ion-icon></button>`,
-
-    // autoplay: true,
-    // autoplaySpeed: 2000,
     centerMode: true,
     centerPadding: '6px',
     responsive: [
@@ -71,8 +109,8 @@ $(document).ready(function () {
         settings: 'unslick',
       },
     ],
-    // autoplay: true,
-    // autoplaySpeed: 1000,
+    autoplay: true,
+    autoplaySpeed: 2000,
   });
 
   $('.assessment-slider').slick({
@@ -86,8 +124,5 @@ $(document).ready(function () {
     prevArrow: `<button type='button' class='slick-prev slick-arrow'><ion-icon name="arrow-back-outline"></ion-icon></button>`,
     nextArrow: `<button type='button' class='slick-next slick-arrow'><ion-icon name="arrow-forward-outline"></ion-icon></button>`,
     dots: true,
-
-    // autoplay: true,
-    // autoplaySpeed: 1000,
   });
 });

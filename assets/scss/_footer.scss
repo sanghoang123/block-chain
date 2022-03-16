@@ -7,6 +7,26 @@ footer {
     @include mobile {
         padding: 2.4rem 0;
     }
+    .footer-arrow {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        font-size: 1.6rem;
+        justify-content: center;
+        align-items: center;
+        padding: 14px 14px;
+        text-decoration: none;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 0 10px 3px rgb(0 0 0 / 30%);
+        display: none;
+        ion-icon {
+            color: $black;
+        }
+    }
+    .footer-arrow.footer-arrow--active {
+        display: inline-flex;
+    }
 }
 .footer__top {
     border-bottom: 1px solid $white;
