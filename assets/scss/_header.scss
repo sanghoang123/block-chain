@@ -109,6 +109,11 @@
       background-color: #e9ecef;
       color: $black;
     }
+    &-search:hover {
+      cursor: pointer;
+      background-color: #02a4ae;
+      color: $white;
+    }
   }
   &__form.header__nav--hide {
     display: none;
@@ -127,6 +132,11 @@
       font-size: 1.8rem;
       font-weight: bold;
       color: $black;
+    }
+  }
+  &__times:hover {
+    ion-icon {
+      color: #02a4ae;
     }
   }
   &__times.header__nav--hide {
@@ -230,8 +240,8 @@
           line-height: 16px;
           color: #000000;
           @include mobile {
-            padding: 0.6rem 0;
-            font-size: 12px;
+            padding: 0.6rem 0 0.6rem 0.6rem;
+            font-size: 10px;
             line-height: 16px;
             color: #000000;
           }

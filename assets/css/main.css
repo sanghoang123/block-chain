@@ -218,6 +218,11 @@ img {
   background-color: #e9ecef;
   color: #000;
 }
+.header__form-search:hover {
+  cursor: pointer;
+  background-color: #02a4ae;
+  color: #fff;
+}
 .header__form.header__nav--hide {
   display: none;
 }
@@ -235,6 +240,9 @@ img {
   font-size: 1.8rem;
   font-weight: bold;
   color: #000;
+}
+.header__times:hover ion-icon {
+  color: #02a4ae;
 }
 .header__times.header__nav--hide {
   display: none;
@@ -363,8 +371,8 @@ img {
 }
 @media screen and (max-width: 767.98px) {
   .navbar li .navbar-list li a {
-    padding: 0.6rem 0;
-    font-size: 12px;
+    padding: 0.6rem 0 0.6rem 0.6rem;
+    font-size: 10px;
     line-height: 16px;
     color: #000000;
   }
@@ -1256,7 +1264,7 @@ img {
 .feature-block .feature-slider .feature__info {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   width: calc(60% + 1rem);
   position: absolute;
   top: 0;
@@ -1269,11 +1277,13 @@ img {
 }
 @media screen and (max-width: 1199.98px) {
   .feature-block .feature-slider .feature__info {
+    top: unset;
     padding: 3.2rem;
   }
 }
 @media screen and (max-width: 767.98px) {
   .feature-block .feature-slider .feature__info {
+    top: 50%;
     padding: 1.6rem;
   }
 }
@@ -1668,6 +1678,7 @@ img {
   transition: all 0.2s linear;
   color: #000 !important;
   background-color: #fff !important;
+  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.1);
 }
 
 .slick-arrow:hover {
@@ -1740,6 +1751,7 @@ footer {
   }
 }
 footer .footer-arrow {
+  z-index: 10;
   position: fixed;
   right: 20px;
   bottom: 20px;
@@ -1755,6 +1767,12 @@ footer .footer-arrow {
 }
 footer .footer-arrow ion-icon {
   color: #000;
+}
+footer .footer-arrow:hover {
+  background-color: #02a4ae;
+}
+footer .footer-arrow:hover ion-icon {
+  color: #fff;
 }
 footer .footer-arrow.footer-arrow--active {
   display: inline-flex;

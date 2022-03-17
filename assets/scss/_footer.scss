@@ -8,6 +8,8 @@ footer {
         padding: 2.4rem 0;
     }
     .footer-arrow {
+        cursor: pointer;
+        z-index: 10;
         position: fixed;
         right: 20px;
         bottom: 20px;
@@ -22,6 +24,12 @@ footer {
         display: none;
         ion-icon {
             color: $black;
+        }
+    }
+    .footer-arrow:hover {
+        background-color: #02a4ae;
+        ion-icon {
+            color: $white;
         }
     }
     .footer-arrow.footer-arrow--active {

@@ -11,12 +11,6 @@ const header_btnSearch = document.querySelector('.header__search');
 const headerForm = document.querySelector('.header__form');
 const header_btnTimes = document.querySelector('.header__times');
 
-arrowFooter = () => {
-  if (document.documentElement.scrollTop >= 1200) {
-    btnScrollToTop.classList.add('footer-arrow--active');
-  } else btnScrollToTop.classList.remove('footer-arrow--active');
-};
-
 // hide/show click search
 header_btnSearch.addEventListener('click', () => handleClickFormSearch());
 
@@ -27,6 +21,12 @@ handleClickFormSearch = (hide = 'header__nav--hide') => {
   arrEle.forEach((e) => {
     e.classList.toggle(hide);
   });
+};
+
+arrowFooter = () => {
+  if (document.documentElement.scrollTop >= 1200) {
+    btnScrollToTop.classList.add('footer-arrow--active');
+  } else btnScrollToTop.classList.remove('footer-arrow--active');
 };
 
 window.onscroll = () => {
