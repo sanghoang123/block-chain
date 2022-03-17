@@ -278,6 +278,7 @@ img {
   position: relative;
 }
 .navbar li a {
+  cursor: pointer;
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 23.1px;
