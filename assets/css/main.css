@@ -1911,6 +1911,11 @@ footer .footer-arrow.footer-arrow--active {
   border: unset;
   cursor: pointer;
   margin-top: 6.4rem;
+  transition: 0.5s all;
+}
+.contact__form .btn-submit:hover {
+  background: #02a4ae;
+  color: #fff;
 }
 
 @media (max-width: 575.98px) {
@@ -2262,6 +2267,17 @@ footer .footer-arrow.footer-arrow--active {
   word-break: break-word;
 }
 
+@media screen and (max-width: 767.98px) {
+  .about-parent {
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+  }
+
+  .about {
+    flex-basis: 100% !important;
+    min-width: 100%;
+  }
+}
 .news-content {
   background: #002631;
   color: #fff;
@@ -3524,13 +3540,9 @@ footer .footer-arrow.footer-arrow--active {
   border-top: 3px solid #3ccace;
 }
 
-.item-left img {
-  min-width: 113px;
-  height: 124px;
-}
-
 .item-left.left-mkt {
   padding: 0;
+  min-width: 400px;
 }
 
 .item-left img.mkt-guide {
@@ -3542,7 +3554,7 @@ footer .footer-arrow.footer-arrow--active {
   padding: 6rem;
 }
 .item-right.right-mkt h4 {
-  font-family: SVN-Poppins;
+  font-family: Poppins;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
@@ -3551,7 +3563,7 @@ footer .footer-arrow.footer-arrow--active {
   text-align: left;
 }
 .item-right.right-mkt p {
-  font-family: SVN-Poppins;
+  font-family: Poppins;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
@@ -3561,7 +3573,7 @@ footer .footer-arrow.footer-arrow--active {
 }
 .item-right.right-mkt ul {
   list-style: circle;
-  font-family: SVN-Poppins;
+  font-family: Poppins;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
@@ -4450,6 +4462,7 @@ footer .footer-arrow.footer-arrow--active {
   align-items: center;
   padding: 30px 60px;
   border-bottom: 3px solid #fff;
+  cursor: pointer;
 }
 .package__content-top-item .item-heading {
   font-size: 32px;
@@ -4485,6 +4498,19 @@ footer .footer-arrow.footer-arrow--active {
   line-height: 36px;
   letter-spacing: 0em;
   text-align: left;
+}
+.package .package-relative {
+  position: relative;
+  min-height: 600px;
+}
+.package .package-relative .package-position {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+.package .package-relative .package-position.active {
+  visibility: visible;
 }
 
 @media (max-width: 575.98px) {
@@ -4678,11 +4704,31 @@ header {
   padding: 3rem;
 }
 .ico-mkt-guide__content-item .content-item {
+  position: relative;
   display: flex;
   align-items: flex-start;
   padding: 4rem;
   border: 1px solid #02a4ae;
   border-radius: 10px;
+}
+.ico-mkt-guide__content-item .content-item:hover img {
+  transform: scale(1.1);
+  transition: 0.5s all;
+}
+.ico-mkt-guide__content-item .content-item:hover::after {
+  opacity: 1;
+  width: 100%;
+}
+.ico-mkt-guide__content-item .content-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(136, 233, 233, 0.178);
+  opacity: 0;
+  transition: 0.5s all;
 }
 .ico-mkt-guide__content-item .content-item-text {
   margin-left: 4rem;

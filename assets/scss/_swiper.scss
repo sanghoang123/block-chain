@@ -18,12 +18,11 @@
   border-top: 3px solid #3ccace;
 }
 .item-left img {
-  min-width: 113px;
-  height: 124px;
 }
 // mkt
 .item-left.left-mkt {
   padding: 0;
+  min-width: 400px;
 }
 .item-left img.mkt-guide {
   height: 100%;
@@ -32,7 +31,7 @@
 .item-right.right-mkt {
   padding: 6rem;
   h4 {
-    font-family: SVN-Poppins;
+    font-family: Poppins;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -41,7 +40,7 @@
     text-align: left;
   }
   p {
-    font-family: SVN-Poppins;
+    font-family: Poppins;
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
@@ -51,7 +50,7 @@
   }
   ul {
     list-style: circle;
-    font-family: SVN-Poppins;
+    font-family: Poppins;
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
