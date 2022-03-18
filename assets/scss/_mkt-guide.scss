@@ -106,7 +106,9 @@ header {
   display: flex;
   gap: 0 3rem;
   margin-bottom: 10rem;
+  overflow-y: auto;
   &-item {
+    cursor: pointer;
     .item-number {
       font-size: 26px;
       font-style: normal;

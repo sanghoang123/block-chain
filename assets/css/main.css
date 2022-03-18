@@ -4885,6 +4885,10 @@ header {
   display: flex;
   gap: 0 3rem;
   margin-bottom: 10rem;
+  overflow-y: auto;
+}
+.mkt-guide-list-item {
+  cursor: pointer;
 }
 .mkt-guide-list-item .item-number {
   font-size: 26px;
