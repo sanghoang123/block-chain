@@ -34,6 +34,7 @@ header {
   &__heading {
     margin-bottom: 10rem;
     .heading {
+      flex: 1;
       font-size: 48px;
       font-style: normal;
       font-weight: 600;
@@ -49,6 +50,7 @@ header {
     &-item {
       flex-basis: 50%;
       padding: 3rem;
+
       .content-item {
         position: relative;
         display: flex;
@@ -56,6 +58,7 @@ header {
         padding: 4rem;
         border: 1px solid $bg-block;
         border-radius: 10px;
+        height: 100%;
         &:hover {
           img {
             transform: scale(1.1);

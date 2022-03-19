@@ -1617,6 +1617,7 @@ img {
 .wallet-feature__list {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 6rem;
 }
@@ -3567,6 +3568,7 @@ footer .footer-arrow.footer-arrow--active {
 .cryptocurrency-content .process-crypto__list {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 6rem 5.9rem;
 }
@@ -4817,6 +4819,7 @@ header {
   margin-bottom: 10rem;
 }
 .ico-mkt-guide__heading .heading {
+  flex: 1;
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
@@ -4840,6 +4843,7 @@ header {
   padding: 4rem;
   border: 1px solid #02a4ae;
   border-radius: 10px;
+  height: 100%;
 }
 .ico-mkt-guide__content-item .content-item:hover img {
   transform: scale(1.1);

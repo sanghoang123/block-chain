@@ -173,6 +173,7 @@
         &__list {
             display: flex;
             align-items: center;
+            justify-content: center;
             flex-wrap: wrap;
             gap: 6rem 5.9rem;
             @include desktops {
