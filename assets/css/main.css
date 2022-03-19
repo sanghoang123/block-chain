@@ -2424,7 +2424,7 @@ footer .footer-arrow.footer-arrow--active {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 4rem calc(10% / 3);
+  gap: 4rem 3.3333333333%;
   margin-left: -calc(10%/6);
   margin-right: -calc(10%/6);
 }
@@ -2441,7 +2441,7 @@ footer .footer-arrow.footer-arrow--active {
 }
 @media screen and (max-width: 1199.98px) {
   .news__item {
-    flex-basis: calc(45%);
+    flex-basis: 45%;
   }
 }
 @media screen and (max-width: 767.98px) {
@@ -4088,7 +4088,7 @@ footer .footer-arrow.footer-arrow--active {
     padding: 3rem;
     background-color: #001b23;
     border-radius: 10px;
-    flex-basis: calc(100% / 2 - 60px);
+    flex-basis: calc(50% - 60px);
   }
   .services__how-lists-item .services-item-left {
     display: flex;
