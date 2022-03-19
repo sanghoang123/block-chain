@@ -16,12 +16,11 @@
 </head>
 
 <body>
-    <div id="main">
         <header>
             <div class="container">
                 <div class="header">
                     <div class="header__nav">
-                        <a class="header__nav-logo" href="#">
+                        <a class="header__nav-logo" href="index.html">
                             <img src="./assets/img/logo.png" alt="" class="nav-logo__pc">
                             <img src="./assets/img/logo-mobile.png" alt="" class="nav-logo__small">
                         </a>
@@ -31,20 +30,13 @@
                                         name="caret-down-outline">
                                     </ion-icon></a>
                                 <ul class="navbar-list">
-                                    <li><a href="ico-development.html">ICO
-                                            Development</a></li>
-                                    <li><a href="ico-website-design.html">ICO
-                                            Website Design</a></li>
-                                    <li><a href="marketing-guide.html">ICO
-                                            Marketing Guide</a></li>
-                                    <li><a href="ico-marketing.html">ICO
-                                            Marketing Services</a></li>
-                                    <li><a href="smart-contract-developer.html">Smart
-                                            contrectdevelopment</a></li>
-                                    <li><a href="wallet-developer.html">Wallet
-                                            Development</a></li>
-                                    <li><a href="cryptocurrency-exchange.html">Cryptocurrency
-                                            Exchange</a></li>
+                                    <li><a href="ico-development.html">ICO Development</a></li>
+                                    <li><a href="ico-website-design.html">ICO Website Design</a></li>
+                                    <li><a href="marketing-guide.html">ICO Marketing Guide</a></li>
+                                    <li><a href="ico-marketing.html">ICO Marketing Services</a></li>
+                                    <li><a href="smart-contract-developer.html">Smart Contract Development</a></li>
+                                    <li><a href="wallet-developer.html">Wallet Development</a></li>
+                                    <li><a href="cryptocurrency-exchange.html">Cryptocurrency Exchange</a></li>
                                 </ul>
                             </li>
                             <li><a href="news.html">News</a></li>
@@ -55,15 +47,22 @@
                             <ion-icon name="reorder-three-outline"></ion-icon>
                         </a>
                     </div>
+                    <div class="header__form header__nav--hide">
+                        <input type="text" class="header__form-input" placeholder="Search">
+                        <a class="header__form-search">
+                            <ion-icon class="header__search-icon-color" name="search-outline"></ion-icon>
+                        </a>
+                    </div>
+                    <div class="header__times header__nav--hide">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </div>
                     <div class="header__search">
-                        <a class="header__search-icon" href="#">
+                        <a class="header__search-icon">
                             <ion-icon class="header__search-icon-color" name="search-outline"></ion-icon>
                         </a>
                     </div>
                 </div>
-            </div>
         </header>
-        <!-- end header -->
         <section class="content">
             <!-- banner -->
             <div class="banner banner__development--bg">
@@ -511,8 +510,6 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
@@ -531,7 +528,7 @@
                         </div>
                         <div class="contact__button">
                             <a href="" class="btn btn--bg
-                                        contact__button-chat">Chat
+                                                    contact__button-chat">Chat
                                 with us<ion-icon name="arrow-forward-outline">
                                 </ion-icon></a>
                         </div>
@@ -539,6 +536,7 @@
                 </div>
             </div>
         </section>
+
         <footer>
             <div class="container">
                 <div class="footer__top">
@@ -570,64 +568,67 @@
                     </div>
                 </div>
             </div>
-
+            <a class="footer-arrow">
+                <ion-icon name="arrow-up-outline"></ion-icon>
+            </a>
         </footer>
-        <!-- swiperJS -->
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-        <script>
-            const swiper = new Swiper('.swiper', {
-                slidesPerView: 1,
-                spaceBetween: 10,
-                loop: true,
-                breakpoints: {
-                    640: {
-                        slidesPerView: 1,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 1,
-                        spaceBetween: 30,
-                    },
-                    1024: {
-                        slidesPerView: 2,
-                        spaceBetween: 30,
-                    },
-                    1280: {
-                        slidesPerView: 2,
-                        spaceBetween: 30,
-                    },
-                    1920: {
-                        slidesPerView: 2,
-                        spaceBetween: 30,
-                    }
+    <!-- swiperJS -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
                 },
-
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
                 },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                1280: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                1920: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                }
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
 
 
-            });
-            //tab
-            const listItems = document.querySelectorAll('.package__content-top-item')
-            const listContents = document.querySelectorAll('.package-position');
-            console.log(listContents);
-            listItems.forEach((item, index) => {
-                item.addEventListener('click', function () {
-                    listItems.forEach(item => {
-                        item.classList.remove('active')
-                    })
-                    listContents.forEach((item) => {
-                        item.classList.remove('active')
-                    })
-                    item.classList.add('active')
-                    listContents[index].classList.add('active')
+        });
+        //tab
+        const listItems = document.querySelectorAll('.package__content-top-item')
+        const listContents = document.querySelectorAll('.package-position');
+        console.log(listContents);
+        listItems.forEach((item, index) => {
+            item.addEventListener('click', function () {
+                listItems.forEach(item => {
+                    item.classList.remove('active')
                 })
+                listContents.forEach((item) => {
+                    item.classList.remove('active')
+                })
+                item.classList.add('active')
+                listContents[index].classList.add('active')
             })
-        </script>
+        })
+    </script>
 </body>
 
 </html>

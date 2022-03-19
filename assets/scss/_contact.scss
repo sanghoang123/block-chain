@@ -34,6 +34,12 @@
         }
     }
     &__button {
+        @include tablet {
+            padding-left: 2rem;
+        }
+        @include mobile {
+            padding-left: 0;
+        }
         &-chat {
             display: flex;
             align-items: center;
@@ -43,6 +49,7 @@
             border: 1px solid $white;
             border-radius: 0.5rem;
             transition: 0.3s linear;
+            word-break: break-word;
             &:hover {
                 background: $white;
                 color: $bg-block;
