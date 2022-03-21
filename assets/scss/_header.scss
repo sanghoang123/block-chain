@@ -43,18 +43,18 @@
       }
 
       img {
-        height: 7rem;
+        height: 5.5rem;
         @include desktops {
-          height: 6rem;
+          height: 4rem;
         }
         @include ipad {
-          height: 5rem;
+          height: 4rem;
         }
         @include phone-l {
-          height: 5rem;
+          height: 3rem;
         }
         @include phone {
-          height: 3rem;
+          height: 2.4rem;
         }
       }
       .nav-logo__pc {
@@ -261,23 +261,21 @@
       }
     }
     .navbar-list::before {
+      --height: 6.3rem;
       content: "";
       position: absolute;
-      height: 5.5rem;
+      height: var(--height);
       left: 0;
       right: 0;
-      top: -20%;
+      top: calc(0% - var(--height));
       @include desktops {
-        height: 4.6rem;
-        top: -15%;
+        --height: 4.2rem;
       }
       @include tablet {
-        height: 3.8rem;
-        top: -13%;
+        --height: 3.8rem;
       }
       @include mobile {
-        height: 3.2rem;
-        top: -16%;
+        --height: 2.7rem;
       }
     }
   }

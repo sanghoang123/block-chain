@@ -67,6 +67,15 @@
                 line-height: 1.89rem;
             }
         }
+        &-link {
+            margin-top: 3rem;
+            font-size: 1.8rem;
+            font-weight: 500;
+            @include tablet {
+                margin-top: 2rem;
+                font-size: 1.4rem;
+            }
+        }
     }
 }
 .banner.banner__ico-website--design {
@@ -89,6 +98,20 @@
 }
 .banner.banner__development--bg {
     background-image: url(../img/bg_hero.png);
+}
+.banner.banner__ekyc--bg {
+    background-image: url(../img/banner-sp-website_18-FPT.AI-eKYC.png);
+    background-position: top right 20%;
+}
+
+.banner.banner__biolink--bg {
+    background-image: url(../img/bio-link-tools-1536x768.png);
+}
+
+.banner.banner__biolink--bg .banner__title-text {
+    @include mobile {
+        text-shadow: 0px 1px 0 #212121, 0 3px 3px rgb(0 0 0 / 30%);
+    }
 }
 
 .intro {
