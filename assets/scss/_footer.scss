@@ -52,6 +52,17 @@ footer {
     &-logo {
         max-width: 100%;
         margin: 4rem 0;
+        @include desktops {
+            max-width: 20%;
+        }
+        @include tablet {
+            max-width: 30%;
+            margin: 2.4rem 0;
+        }
+        @include mobile {
+            max-width: 40%;
+            margin: 2rem 0;
+        }
     }
     &-subtext {
         color: $white;
